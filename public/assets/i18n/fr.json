@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "inicio": "Accueil",
+    "conocenos": "À propos",
+    "servicios": "Services et installations",
+    "experiencias": "Expériences et aventures",
+    "resenas": "Avis",
+    "paquetes": "Forfaits promotionnels",
+    "reservar": "Réserver"
+  }
+}
