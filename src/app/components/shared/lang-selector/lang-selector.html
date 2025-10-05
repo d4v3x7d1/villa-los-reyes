@@ -1,0 +1,19 @@
+<div class="lang-selector">
+  <!-- Bandera actual + caret -->
+  <div class="lang-current-container">
+    <span class="lang-current" [class]="currentLang.class"></span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </div>
+
+  <!-- Menú desplegable -->
+  <div class="lang-dropdown">
+    @for (lang of languages; track lang.code) {
+      @if (lang.code !== currentLang.code) {
+        <div class="lang-option" (click)="setLanguage(lang)">
+          <span [class]="lang.class"></span>
+          <span class="lang-code">{{ lang.code.toUpperCase() }}</span>
+        </div>
+      }
+    }
+  </div>
+</div>
