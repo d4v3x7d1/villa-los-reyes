@@ -1,0 +1,5 @@
+.image-gallery-thumbs {
+  display: flex;
+  justify-content: space-between;
+}
+

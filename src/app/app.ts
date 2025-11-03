@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Counter } from './garbage-components/counter';
+import { NavbarSection } from "./components/sections/navbar-section/navbar-section";
+import { PromoBanner } from "./components/shared/promo-banner/promo-banner";
+import { FooterSection } from "./components/sections/footer-section/footer-section";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, PromoBanner, FooterSection, NavbarSection],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

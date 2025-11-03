@@ -1,0 +1,11 @@
+<div class="info-panel">
+  <h1>{{ title() | translate }}</h1>
+
+  <p [innerHTML]="description() | translate"></p>
+
+  @if (link()) {
+    <a [routerLink]="link()?.url" class="info-button">
+      {{ link()?.text | translate }}
+    </a>
+  }
+</div>

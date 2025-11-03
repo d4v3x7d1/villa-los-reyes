@@ -1,0 +1,8 @@
+gallery-info-section {
+  margin-top: -7.5rem;
+}
+
+.fade-wrapper {
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}

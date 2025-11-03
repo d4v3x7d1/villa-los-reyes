@@ -1,0 +1,18 @@
+<div class="rooms-grid">
+  <!-- Primer elemento -->
+  <info-panel
+    [title]="info().title"
+    [description]="info().description"
+    >
+  </info-panel>
+
+  <!-- Otros 5 elementos -->
+  @for (room of rooms(); track room.src) {
+    <room-item
+      [src]="room.src"
+      [alt]="room.alt"
+      [name]="room.name"
+      [details]="room.details">
+    </room-item>
+  }
+</div>

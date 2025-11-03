@@ -1,0 +1,64 @@
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  flex: 1 1 250px;
+  max-width: 520px;
+
+  /* background: #fff; */
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-radius 10s ease;
+}
+
+/* Hover discreto */
+.experience-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagen */
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  /* aspect-ratio: 1 / 1; */
+
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Pequeño zoom muy sutil */
+.experience-item:hover .image-wrapper img {
+  transform: scale(1.02);
+  border-radius: 0px;
+}
+
+.experience-item:hover .image-wrapper {
+  /* transform: scale(1.02); */
+  border-radius: 4px;
+}
+
+
+/* Texto */
+.experience-item h2 {
+  font-size: 1.45em;
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0 1.2rem;
+  color: #234E3F;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}

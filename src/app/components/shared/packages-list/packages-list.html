@@ -1,0 +1,9 @@
+<div class="packages-list">
+  @for (pkg of packages(); track pkg.title) {
+  <a [routerLink]="pkg.path" class="package-link">
+    <package-item [image]="pkg.src" [alt]="pkg.alt" [title]="pkg.title" [duration]="pkg.duration"
+      [description]="pkg.description" [price]="pkg.price">
+    </package-item>
+  </a>
+  }
+</div>

@@ -1,0 +1,30 @@
+.promo-banner {
+
+  padding: 12px 20px;
+  background-color: #FFB86E;
+  /* verde oscuro de ejemplo */
+  color: #08372A;
+  font-size: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  font-family: "Poppins";
+  line-height: 24px;
+  height: 56px;
+  align-content: center;
+
+}
+
+.message-container {
+  align-content: center;
+}
+
+.message {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
+}
+
+.message.active {
+  opacity: 1;
+}

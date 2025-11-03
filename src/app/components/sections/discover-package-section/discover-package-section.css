@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  background: #E4EAE5;
+  width: 100%;
+}
+
+/* '#E4EAE5' '#f7faf7'; */
+
+.discover-package-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #f7faf7;
+  padding: 5rem;
+  border-radius: 3rem 3rem 0 0;
+  gap: 3rem;
+  width: 100%;
+
+}

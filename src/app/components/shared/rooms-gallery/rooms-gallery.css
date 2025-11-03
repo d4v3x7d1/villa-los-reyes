@@ -1,0 +1,12 @@
+.rooms-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex: 1;
+  height: 400px;
+}
+
+.room-link {
+  text-decoration: none;
+  display: block; /* mantiene el layout del room-item intacto */
+}

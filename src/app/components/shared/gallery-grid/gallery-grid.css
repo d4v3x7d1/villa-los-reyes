@@ -1,0 +1,49 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.main-image-wrapper {
+  grid-column: span 6;
+  height: 45vh;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.thumb-image-wrapper {
+  height: 24vh;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  grid-column: span 2; /* por defecto 3 thumbs -> 2 columnas c/u */
+}
+
+/* Ajuste si solo hay 2 thumbs */
+.gallery-grid:has(.thumb-image-wrapper:nth-last-child(2):nth-child(2)) .thumb-image-wrapper {
+  grid-column: span 3; /* 2 thumbs → 3 columnas cada una */
+}
+
+/* imágenes dentro */
+.main-image-wrapper img,
+.thumb-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* gradiente encima */
+.main-image-wrapper::after,
+.thumb-image-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.06),
+    rgba(0, 0, 0, 0.1)
+  );
+  pointer-events: none;
+}

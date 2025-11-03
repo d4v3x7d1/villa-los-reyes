@@ -1,0 +1,42 @@
+:host {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-info-section {
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* min-height: 50rem; */
+  overflow: hidden;
+  padding: 5rem;
+  border-radius: 3rem 3rem 0 0;
+  gap: 4rem;
+}
+
+/* Columna izquierda (imágenes) */
+.gallery-info-section> :first-child {
+  flex: 0 0 60%;
+  min-width: 25rem;
+  order: 1;
+}
+
+/* Columna derecha (texto) */
+.gallery-info-section> :nth-child(2) {
+  flex: 1 1 40%;
+  min-width: 20rem;
+  order: 2;
+}
+
+
+.gallery-info-section.reverse> :first-child {
+  order: 2;
+}
+
+.gallery-info-section.reverse> :nth-child(2) {
+  order: 1;
+}

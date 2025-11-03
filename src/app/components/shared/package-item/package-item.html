@@ -1,0 +1,10 @@
+<div class="package-item">
+  <img [src]="image()" [alt]="alt() | translate" />
+
+  <div class="package-overlay">
+    <h2>{{ title() | translate }}</h2>
+    <p class="duration">{{ duration() | translate }}</p>
+    <p class="description">{{ description() | translate }}</p>
+    <p class="price">{{ price() | translate }}</p>
+  </div>
+</div>

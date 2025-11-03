@@ -1,0 +1,12 @@
+<section class="gallery-info-section" [class.reverse]="reverse()" [style.background]="color()">
+  <gallery-grid [mainImage]="mainImage()" [thumbImages]="thumbImages()" [mainHeight]="mainHeight()"
+    [thumbHeight]="thumbHeight()" />
+
+  <div>
+    <info-panel [title]="title()" [description]="description()" [link]="link()" [style.width]="panelWidth()" />
+
+    @if (featuresTitle() && features()) {
+    <feature-list [title]="featuresTitle()!" [features]="features()!" />
+    }
+  </div>
+</section>

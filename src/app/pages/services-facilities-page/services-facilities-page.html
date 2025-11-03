@@ -1,0 +1,52 @@
+<div class="page-content">
+  <!-- 🟩 Header principal -->
+  <main-header-section [head]="{
+      title: 'servicesFacilities.header.title' ,
+      description: 'servicesFacilities.header.description'
+    }" [image]="{
+      src: 'assets/images/restaurant/slide-bar-area.jpg',
+      alt: 'Restaurante Bar de Villa Los Reyes'
+    }" [objectPosition]="'50% 40%'" />
+
+  <!-- 🟦 Sección 1: Instalaciones -->
+  <split-gallery-section class="mt-negative" [leftImage]="{
+      src: '/assets/images/outdoor-areas/gardens-03.jpg',
+      alt: 'Instalaciones y vistas panorámicas de Villa Los Reyes'
+    }" [info]="{
+      title: 'servicesFacilities.sections.0.title' ,
+      description: 'servicesFacilities.sections.0.description' ,
+      link: { text: 'servicesFacilities.sections.0.link' , url: '/services-facilities/facilities' }
+    }" [rightImages]="rooms.slice(0,3)" [hasHostBg]="false" [color]="'#E4EAE5'" />
+
+  <!-- 🟥 Sección 2: Servicios -->
+  <split-gallery-section [leftImage]="{
+      src: '/assets/images/restaurant/slide-dining-area-01.jpg',
+      alt: 'Gastronomía y servicios de Villa Los Reyes'
+    }" [info]="{
+      title: 'servicesFacilities.sections.1.title' ,
+      description: 'servicesFacilities.sections.1.description' ,
+      link: { text: 'servicesFacilities.sections.1.link' , url: '/paquetes' }
+    }" [rightImages]="[
+    {
+      src: '/assets/images/restaurant/slide-dining-area-02.jpg',
+      alt: 'Gastronomía cubana',
+      name: 'Gastronomía',
+      details: 'Restaurante con sabores cubanos e internacionales.',
+      path: '/services-facilities/services#gastronomy'
+    },
+    {
+      src: '/assets/images/vehicles/vehicle-01.jpg',
+      alt: 'Transporte y movilidad',
+      name: 'Movilidad',
+      details: 'Traslados y excursiones con chofer privado.',
+      path: '/services-facilities/services#mobility'
+    },
+    {
+      src: '/assets/images/amenities/slide-trip-planner.jpg',
+      alt: 'Gestor de viajes',
+      name: 'Planificación de viajes',
+      details: 'Te ayudamos a diseñar tu experiencia en Viñales.',
+      path: '/services-facilities/services#tripPlanner'
+    }
+  ]" color="#f7faf7" />
+</div>

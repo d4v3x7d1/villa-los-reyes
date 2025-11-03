@@ -1,0 +1,11 @@
+<div class="gallery-grid">
+  <div class="main-image-wrapper" [style.height]="mainHeight()">
+    <img [src]="mainImage().src" [alt]="mainImage().alt | translate" />
+  </div>
+
+  @for (image of thumbImages(); track $index) {
+    <div class="thumb-image-wrapper" [style.height]="thumbHeight()"  >
+      <img [src]="image.src" [alt]="image.alt | translate" />
+    </div>
+  }
+</div>

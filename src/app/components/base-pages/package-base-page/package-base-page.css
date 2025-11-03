@@ -1,0 +1,204 @@
+:host {
+  display: block;
+  font-family: Poppins, sans-serif;
+  color: #234E3F;
+}
+
+li {
+  list-style: none;
+}
+
+.page-content {
+  background: #E9EFEA;
+  padding: 10rem 10rem 5rem;
+}
+
+.offer-details-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.offer-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.offer-column.itinerary {
+  gap: 1.5rem;
+}
+
+.offer-column.includes {
+  background: #fff;
+  padding: 2rem 4rem;
+  border-radius: 16px;
+}
+
+
+
+/* ======== ENCABEZADO PRINCIPAL ======== */
+.discover-header {
+  padding: 2rem 0;
+}
+
+.discover-header h2 {
+  color: #D17D00;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.discover-header p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.03125rem;
+}
+
+/* ======== COLUMNA ITINERARIO ======== */
+
+.offer-column.itinerary h3 {
+  color: #234E3F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+
+
+.offer-column.itinerary li {
+  /* max-width: 75%; */
+  padding-bottom: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.03125rem;
+}
+
+.offer-column.itinerary strong {
+  font-weight: 700;
+}
+
+/* ======== COLUMNA INCLUYE ======== */
+.offer-column.includes h3 {
+  color: #D17D00;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+  padding-bottom: 1.5rem;
+}
+
+
+.offer-column.includes h4 {
+  color: #08372A;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  letter-spacing: 0.00625rem;
+}
+
+.offer-column.includes ul {
+  margin-bottom: 1.5rem;
+}
+
+
+.offer-column.includes li {
+  color: #404944;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.00625rem;
+}
+
+.offer-column.includes li strong {
+  font-weight: 700;
+}
+
+/* ======== TOTAL ======== */
+
+.offer-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Poppins;
+  color: #234e3f;
+  margin-top: 1rem;
+}
+
+.total-label {
+  color: var(--M3-ref-primary-primary40, #3C6756);
+  font-family: Poppins;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.375rem;
+  /* 135.714% */
+}
+
+.amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3C6756;
+  line-height: 2.375rem;
+}
+
+.currency {
+  margin-left: 0.25rem;
+
+  color: #D17D00;
+
+  text-transform: uppercase;
+
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+}
+
+.note {
+  display: flex;
+  height: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+
+
+  color: #08372A;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.03125rem;
+}
+
+/* 🔘 Botón de reserva */
+.reserve-btn {
+
+  display: flex;
+  height: 3.75rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: stretch;
+  border-radius: 1.8rem;
+  background-color: #F49516;
+  color: #fff;
+
+  font-family: Poppins;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  line-height: 1.375rem;
+  letter-spacing: 0.03125rem;
+  border: none;
+  margin-top: 2rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background-color: #f49416c9;
+}

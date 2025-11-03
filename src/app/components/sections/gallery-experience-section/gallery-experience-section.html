@@ -1,0 +1,12 @@
+<section class="gallery-hiking-section">
+  <div class="gallery-grid">
+    @for (img of images(); track $index) {
+      <a class="gallery-item" [routerLink]="img.path">
+        <img [src]="img.src" [alt]="img.title" loading="lazy" />
+        <div class="overlay">
+          <h3>{{ img.title }}</h3>
+        </div>
+      </a>
+    }
+  </div>
+</section>

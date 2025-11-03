@@ -1,0 +1,11 @@
+.experiences-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.experience-link {
+  display: block;
+  text-decoration: none;
+}

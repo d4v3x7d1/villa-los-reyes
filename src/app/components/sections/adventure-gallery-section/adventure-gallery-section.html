@@ -1,0 +1,10 @@
+<div class="horseback-gallery">
+  @for (item of items(); track $index) {
+    <a class="gallery-item" [routerLink]="item.path">
+      <img [src]="item.src" [alt]="item.label" />
+      <div class="overlay">
+        <span>{{ item.label }}</span>
+      </div>
+    </a>
+  }
+</div>

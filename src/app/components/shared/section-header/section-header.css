@@ -1,0 +1,62 @@
+.section-header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header h1 {
+  color: #D17D00;
+  font-family: Poppins, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+
+
+.section-header p {
+  font-family: Poppins, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #234E3F;
+  line-height: 1.875rem;
+  white-space: pre-line;
+  letter-spacing: 0.03rem;
+}
+
+.section-header a {
+  color: #186B53;
+  font-family: Poppins, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.section-header a:hover {
+  color: #0f4e3a;
+}
+
+.section-header a.text-link {
+  color: #147CA7;
+  font-family: Poppins, sans-serif;
+  font-size: 1.13rem;
+  font-weight: 700;
+  line-height: 1.88rem;
+  letter-spacing: 0.03rem;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-transform: lowercase;
+
+  text-underline-position: under;
+  transition: color 0.2s;
+}
+
+.section-header a.text-link:hover {
+  color: #0F6690;
+  /* un poco más oscuro para hover */
+}

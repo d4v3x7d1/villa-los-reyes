@@ -1,0 +1,15 @@
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  align-items: center;
+background-color: #f7faf7;
+  padding: 6.5rem  6rem;
+  border-radius: 3rem 3rem 0 0;
+
+}
+
+:host{
+  display: block;
+}

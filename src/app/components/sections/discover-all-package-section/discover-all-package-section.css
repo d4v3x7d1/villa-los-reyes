@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.discover-package-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 5rem 3rem;
+  background-color: #f6f1e9;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.discover-info {
+  padding: 0 2.5rem;
+  text-align: left;
+}
+
+h2 {
+  color: #d17d00;
+  font-family: Poppins, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #234e3f;
+  font-family: Poppins, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.03125rem;
+  margin: 0;
+}
+
+strong {
+  color: #234e3f;
+  font-family: Poppins, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+  letter-spacing: 0.03125rem;
+}
+

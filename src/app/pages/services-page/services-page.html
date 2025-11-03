@@ -1,0 +1,123 @@
+<div class="page-content">
+
+  <!-- ========================
+       Header Principal
+  ========================= -->
+  <main-header-section 
+    [head]="{
+      title: ('services.header.title'),
+      description: ('services.header.description')
+    }" 
+    [image]="{
+      src: 'assets/images/restaurant/slide-dining-area-01.jpg',
+      alt: 'Restaurante y bar de Villa Los Reyes'
+    }" 
+    [objectPosition]="'50% 40%'" 
+  />
+
+  <!-- ========================
+       Gastronomía
+  ========================= -->
+  <div id="gastronomy" class="fragment-anchor"></div>
+  <gallery-info-section  
+    class="split-layout--up" 
+    [mainImage]="{
+      src: 'assets/images/restaurant/slide-dining-area-01.jpg',
+      alt: ('services.sections.0.title') + ' - ' + ('services.header.title')
+    }" 
+    [thumbImages]="[
+      { src: 'assets/images/restaurant/slide-bar-area.jpg', alt: ('services.sections.0.title') + ' 1' },
+      { src: 'assets/images/gallery/slide-restaurant.jpg', alt: ('services.sections.0.title') + ' 2' },
+      { src: 'assets/images/restaurant/slide-dining-area-02.jpg', alt: ('services.sections.0.title') + ' 3' }
+    ]" 
+    [title]="('services.sections.0.title')" 
+    [description]="('services.sections.0.description')"
+    [featuresTitle]="('services.sections.0.features.title')" 
+    [features]="[
+      ('services.sections.0.features.items.0'),
+      ('services.sections.0.features.items.1'),
+      ('services.sections.0.features.items.2'),
+      ('services.sections.0.features.items.3'),
+      ('services.sections.0.features.items.4'),
+      ('services.sections.0.features.items.5')
+    ]" 
+    [panelWidth]="'600px'"
+    [hasHostBg]="false"
+  />
+
+  <!-- ========================
+       Movilidad
+  ========================= -->
+  <div id="mobility" class="fragment-anchor"></div>
+  <split-layout-section   
+    featuresTitle="Servicios:"
+    [features]="['Hospedaje','Transporte','Gastronomía','Experiencias y aventuras']"
+    [images]="[
+      {src:'assets/images/vehicles/vehicle-01.jpg',alt:''},
+      {src:'assets/images/vehicles/vehicle-02.jpg',alt:''}
+    ]"
+    [info]="{
+      title:'Movilidad',
+      description:'Ofrecemos asesoramiento personalizado para organizar tu viaje a Viñales o cualquier destino en Cuba. Nos encargamos de gestionar alojamiento, transporte y actividades, asegurando una experiencia cómoda e inolvidable. ¡Déjanos hacer tu estancia grata e inolvidable!'
+    }"
+    [reverse]="true" 
+    [color]="'#f7faf7'" 
+  />
+
+  <!-- ========================
+       Trip Planner
+  ========================= -->
+  <div id="tripPlanner" class="fragment-anchor"></div>
+  <split-layout-section  
+    featuresTitle="Servicios:"
+    [features]="['Hospedaje','Transporte','Gastronomía','Experiencias y aventuras']"
+    [images]="[{src:'assets/images/amenities/slide-trip-planner.jpg',alt:''}]"
+    [info]="{
+      title:'Trip planner',
+      description:'Ofrecemos asesoramiento personalizado para organizar tu viaje a Viñales o cualquier destino en Cuba. Nos encargamos de gestionar alojamiento, transporte y actividades, asegurando una experiencia cómoda e inolvidable. ¡Déjanos hacer tu estancia grata e inolvidable!'
+    }" 
+  />
+
+  <!-- ========================
+       Lavandería
+  ========================= -->
+  <div id="laundry" class="fragment-anchor"></div>
+  <split-layout-section  
+    featuresTitle="Servicios:" 
+    [features]="['Lavado','Planchado']"
+    [images]="[{src:'assets/images/amenities/slide-laundry.jpg',alt:''}]"
+    [info]="{
+      title:'Lavandería',
+      description:'Nuestro servicio de lavandería incluye lavado y planchado de ropa, fregado de zapatos y bolsos. Así, siempre tendrás todo impecable y listo para disfrutar al máximo.\nContamos con un espacio dedicado al lavado a mano, ideal para quienes prefieren realizar el proceso por sí mismos en lugar de optar por el servicio de lavandería.'
+    }"
+    [reverse]="true" 
+    [color]="'#f7faf7'" 
+  />
+
+  <!-- ========================
+       Masajes
+  ========================= -->
+  <div id="massages" class="fragment-anchor"></div>
+  <split-layout-section 
+    [images]="[{src:'/assets/images/amenities/slide-massage.jpg',alt:''}]"
+    [info]="{
+      title:'Masajes',
+      description:'Ofrecemos un servicio de masajes diseñado para brindarle el máximo confort y relajación durante su estancia. Nuestros masajistas profesionales están capacitados en diversas técnicas de masaje, asegurando que cada sesión sea personalizada según sus necesidades y preferencias.\nDescubre una experiencia rejuvenecedora en un entorno tranquilo. Puede solicitar su reservación con al menos 30 minutos de antelación en nuestra Villa.'
+    }" 
+  />
+
+  <!-- ========================
+       Clases de baile
+  ========================= -->
+  <div id="danceClasses" class="fragment-anchor"></div>
+  <split-layout-section  
+    [images]="[{src:'assets/images/amenities/slide-dance.jpg',alt:''}]"
+    [info]="{
+      title:'Clases de baile',
+      description:'Ofrecemos clases de bailes tradicionales cubanos para que te sumerjas en la rica cultura de Cuba. Con instructores calificados y apasionados, disfrutarás de una experiencia educativa y divertida. Elige entre clases individuales o en grupo, adaptadas a tu nivel y tiempo. ¡No pierdas la oportunidad de enriquecer tu estancia con el sabor de Cuba!'
+    }"
+    [reverse]="true" 
+    [color]="'#f7faf7'" 
+  />
+
+</div>

@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  background: #E4EAE5;
+
+}
+/* '#E4EAE5' '#f7faf7'; */
+.discover-experiences-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 100%;
+   padding: 5rem;
+
+  border-radius: 3rem 3rem 0 0;
+  background: #f7faf7;
+
+  overflow: hidden;
+
+  min-height: 50rem;
+
+}

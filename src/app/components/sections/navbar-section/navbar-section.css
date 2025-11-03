@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.navbar {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 80px;
+  background-color: #00513D;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: stretch;
+  margin-left: 60px;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-menu li {
+  display: inline-flex;
+  /* ancho depende del contenido */
+  flex-direction: column;
+  /* para que el texto largo pueda ir a otra línea */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* centra el texto dentro del li */
+  padding: 4px 12px;
+  /* padding interno */
+  max-width: 150px;
+  /* opcional, limita la anchura de cada li */
+}
+
+/* Enlaces */
+.navbar-menu a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li.active {
+  position: relative;
+  /* necesario para el ::after */
+}
+
+.navbar-menu li.active a {
+  color: #F49516;
+}
+
+.navbar-menu li.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  /* al fondo del li */
+  width: 80%;
+  /* ancho de la línea */
+  height: 4px;
+  /* grosor */
+  background-color: #F49516;
+  border-radius: 3px 3px 0 0;
+  /* bordes redondeados */
+}
+
+
+.navbar-menu a:hover {
+  color: #F49516;
+}
+
+/* Botón reservar */
+.btn-reservar {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 28px;
+  background: #F49516;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background: #ffb553;
+}
+

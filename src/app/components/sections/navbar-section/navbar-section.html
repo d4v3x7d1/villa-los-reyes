@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <!-- Logo -->
+  <div class="navbar-logo">
+    <img src="assets/logo/logo-villa.svg" alt="Villa Los Reyes" width="168" height="64">
+  </div>
+
+  <!-- Menú -->
+  <ul class="navbar-menu">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+
+      <a [routerLink]="['/home']">{{ 'navbar.inicio' | translate }}</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]=" ['/about']">{{'navbar.conocenos' | translate }}</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]=" ['/services-facilities']">{{'navbar.servicios' | translate }}</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]=" ['/experiences']">{{'navbar.experiencias' | translate }}</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]=" ['/reviews']">{{'navbar.resenas' | translate }}</a>
+    </li>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <a [routerLink]=" ['/packages']">{{'navbar.paquetes' | translate }}</a>
+    </li>
+    <!-- 'booking' -->
+
+    <li><button class="btn-reservar">{{ 'navbar.reservar' | translate }}</button></li>
+    <li>
+      <lang-selector></lang-selector>
+    </li>
+  </ul>
+</nav>

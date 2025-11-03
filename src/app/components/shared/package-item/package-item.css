@@ -1,0 +1,167 @@
+.package-item {
+  flex: 1;
+
+  position: relative;
+  width: 100%;
+  height: 520px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #222;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  z-index: 0;
+
+}
+
+
+/* Hover visual */
+.package-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Imagen */
+.package-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.6s ease;
+  display: block;
+  opacity: 1;
+}
+
+
+/* Fallback si la imagen no carga */
+.package-item img[ng-reflect-src=""],
+.package-item img[src=""] {
+  background: linear-gradient(135deg, #444, #222);
+}
+
+/* Zoom en hover */
+.package-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ───────────────────────────────
+   📋 OVERLAY DE TEXTO
+   ─────────────────────────────── */
+.package-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  padding: 1rem;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.85) 25%,
+      rgba(0, 0, 0, 0.15) 70%,
+      transparent 95%);
+  color: #fff;
+  pointer-events: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Tipografía y sombra general */
+.package-overlay * {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-family: Poppins, sans-serif;
+  line-height: 1.25;
+}
+
+/* Textos */
+.package-overlay h2 {
+
+  color: #FFF;
+
+  /* M3/title/large */
+  font-family: Poppins;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.375rem;
+  /* 135.714% */
+  margin: 0 0 0.15rem 0;
+
+}
+
+
+.package-overlay .duration {
+
+  color: #FFF;
+
+  /* M3/label/medium */
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+  /* 137.5% */
+  letter-spacing: 0.03125rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.package-overlay .description {
+  overflow: hidden;
+  color: #FFF;
+  text-overflow: ellipsis;
+
+  /* M3/label/medium */
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+  /* 137.5% */
+  letter-spacing: 0.03125rem;
+  opacity: 0.85;
+  text-align: left;
+  margin: 0.3rem 0 0.2rem;
+  max-width: 95%;
+}
+
+.package-overlay .price {
+
+  /* M3/title/large */
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.375rem;
+  /* 135.714% */
+  color: #80ff80;
+  margin-top: 0.25rem;
+}
+
+
+/* ───────────────────────────────
+   📱 Responsividad
+   ─────────────────────────────── */
+/* @media (max-width: 600px) {
+  .package-item {
+    height: 300px;
+  }
+
+  .package-overlay {
+    padding: 0.75rem;
+  }
+
+  .package-overlay h2 {
+    font-size: 0.9rem;
+  }
+
+  .package-overlay .description {
+    display: none;
+  }
+
+  .package-overlay .price {
+    font-size: 0.85rem;
+  }
+} */

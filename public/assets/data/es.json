@@ -1,0 +1,331 @@
+{
+  "carousel": {
+    "slide1": {
+      "alt": "Villa Los Reyes — alojamiento rural en Viñales, fachada principal con jardín y entrada",
+      "title": "¡Sus vacaciones\ncon nosotros!",
+      "subtitle": "¡Descubra Viñales con nosotros!\nAventuras naturales, bellas vistas y tranquilidad."
+    },
+    "slide2": {
+      "alt": "Villa Los Reyes — patio central y piscina, zona de descanso al aire libre en Viñales",
+      "title": "¡Sus vacaciones\ncon nosotros!",
+      "subtitle": "¡Descubra Viñales con nosotros!\nAventuras naturales, bellas vistas y tranquilidad."
+    },
+    "slide3": {
+      "alt": "Villa Los Reyes — paneles solares en tejado, alojamiento sostenible y energía renovable",
+      "title": "¡Sus vacaciones\ncon nosotros!",
+      "subtitle": "¡Descubra Viñales con nosotros!\n Aventuras naturales, bellas vistas y tranquilidad."
+    },
+    "slide4": {
+      "alt": "Villa Los Reyes — habitación con vistas al patio interior y acceso a jardín",
+      "title": "¡Sus vacaciones\ncon nosotros!",
+      "subtitle": "¡Descubra Viñales con nosotros!\nAventuras naturales, bellas vistas y tranquilidad."
+    }
+  },
+  "navbar": {
+    "inicio": "Inicio",
+    "conocenos": "Conócenos",
+    "servicios": "Servicios e instalaciones",
+    "experiencias": "Experiencias y aventuras",
+    "resenas": "Reseñas",
+    "paquetes": "Paquetes promocionales",
+    "reservar": "Reservar"
+  },
+  "promo": {
+    "organiza": "Organiza tu viaje con nosotros",
+    "verano": "Super promoción de verano. Gana hasta un <strong>10% de descuento</strong>",
+    "paquetes": "Conoce nuestros paquetes promocionales"
+  },
+  "about": {
+    "info": {
+      "title": "Conoce\nVilla Los Reyes",
+      "description": "Bienvenido a <strong>Villa Los Reyes</strong> en <strong>Viñales</strong>. Con más de <strong>20 años de experiencia</strong>, ofrecemos servicios hoteleros y extrahoteleros adaptados a tus necesidades. Nos dedicamos a garantizar tu <strong>máxima comodidad</strong>, asegurando que disfrutes de un <strong>resort ecológico</strong> con <strong>disponibilidad eléctrica las 24 horas</strong>. Ven y disfruta de una experiencia única en un entorno incomparable.",
+      "button": "Descubre más"
+    },
+    "mainHeader": {
+      "title": "Conoce Villa Los Reyes",
+      "description": "Descubre nuestra casa de huéspedes con más de <strong>20 años de experiencia</strong>",
+      "imageAlt": "Fachada de Villa Los Reyes"
+    },
+    "location": {
+      "title": "Ubicación privilegiada",
+      "description": "Ubicada en un entorno privilegiado, <strong>Villa Los Reyes</strong> se encuentra en el pintoresco pueblo de Viñales, ofreciendo un <strong>acceso fácil y rápido</strong> a todas las atracciones locales mientras se disfruta de la <strong>tranquilidad y belleza natural</strong> de la región."
+    },
+    "nature": {
+      "title": "Belleza natural",
+      "description": "En Villa Los Reyes, además de encontrar un lugar de <strong>descanso</strong>, podrá acceder a una variedad de <strong>experiencias y aventuras</strong>. Ofrecemos <strong>ecoactividades guiadas</strong> por expertos locales que le permitirán explorar la <strong>belleza natural y cultural de Viñales</strong>, desde <strong>excursiones</strong> a pie, a caballo, en coche y en bicicleta hasta visitas a <strong>plantaciones de tabaco y cuevas</strong>."
+    },
+    "comfort": {
+      "title": "Confort",
+      "description": "Villa Los Reyes es un <strong>resort ecológico privado</strong> de <strong>construcción moderna</strong>, equipado con <strong>paneles solares</strong> para garantizar <strong>electricidad las 24 horas</strong>. Ofrece <strong>cinco cómodas habitaciones</strong>, un <strong>restaurante</strong> con platos locales e internacionales y un <strong>bar con exquisita coctelería cubana</strong>. También dispone de una <strong>piscina</strong> perfecta para los días calurosos y accesibilidad para sillas de ruedas. Desde sus terrazas se disfruta una <strong>majestuosa vista a los mogotes</strong>, completando una experiencia única de confort y naturaleza."
+    },
+    "sustainability": {
+      "title": "Sostenibilidad",
+      "description": "Nos enorgullece decir que nuestra villa es <strong>sostenible</strong>, ya que la <strong>energía eléctrica</strong> que utilizamos es administrada mediante <strong>paneles solares</strong>, contribuyendo así al <strong>cuidado del medio ambiente</strong>. Además, hemos implementado <strong>prácticas de reciclaje</strong> y <strong>uso eficiente del agua</strong>, asegurando que cada aspecto de nuestra operación minimice el impacto ecológico y promueva un <strong>futuro más verde y saludable</strong>."
+    }
+  },
+  "images": {
+    "aboutSection": {
+      "mainAlt": "Vista general de Villa Los Reyes",
+      "thumb1Alt": "Habitación acogedora para huéspedes",
+      "thumb2Alt": "Área de bar y restaurante de la villa",
+      "thumb3Alt": "Paneles solares en la propiedad"
+    }
+  },
+  "experiences": {
+    "header": {
+      "title": "Experiencias y Aventuras",
+      "description": "Descubre Viñales con nuestras emocionantes excursiones: [cabalgatas](/experiences/horseback-riding), [senderismo](/experiences/hiking), [ciclotours](/experiences/cycle-tours) y [más](/experiences/other).\n¡Aventuras inolvidables en un entorno natural único te esperan!",
+      "linkText": "Ver todas las experiencias y aventuras"
+    },
+    "items": {
+      "cabalgatas": {
+        "title": "Cabalgatas",
+        "alt": "Cabalgatas a caballo por los valles de Viñales"
+      },
+      "senderismo": {
+        "title": "Senderismo",
+        "alt": "Senderismo por los mogotes y caminos naturales de Viñales"
+      },
+      "ciclotours": {
+        "title": "Ciclo Tours",
+        "alt": "Ciclo tours por los paisajes rurales de Viñales"
+      },
+      "otras": {
+        "title": "Otras Experiencias",
+        "alt": "Otras experiencias únicas en Villa Los Reyes"
+      }
+    }
+  },
+  "rooms": {
+    "info": {
+      "title": "Nuestras\nhabitaciones",
+      "description": "Nuestras cinco habitaciones independientes ofrecen privacidad, baños privados y acceso a diversas áreas comunes, todo en un entorno rodeado de jardines exuberantes y con vistas a los imponentes mogotes del Valle de Viñales.",
+      "button": "DESCUBRE MÁS"
+    },
+    "images": {
+      "room1Alt": "Habitación con camas dobles y baño privado",
+      "room1Name": "Habitación 1",
+      "room1Details": "2 camas / Baño privado / 4 personas",
+      "room2Alt": "Habitación con camas dobles y baño privado",
+      "room2Name": "Habitación 2",
+      "room2Details": "2 camas / Baño privado / 4 personas",
+      "room3Alt": "Habitación con camas dobles y baño privado",
+      "room3Name": "Habitación 3",
+      "room3Details": "2 camas / Baño privado / 4 personas",
+      "room4Alt": "Habitación con camas dobles y baño privado",
+      "room4Name": "Habitación 4",
+      "room4Details": "2 camas / Baño privado / 4 personas",
+      "room5Alt": "Habitación con camas dobles y baño privado",
+      "room5Name": "Habitación 5",
+      "room5Details": "2 camas / Baño privado / 4 personas"
+    }
+  },
+  "packages": {
+    "title": "Paquetes en ofertas",
+    "description": "Vive la magia de Viñales con nuestros paquetes exclusivos: <strong>alojamiento acogedor</strong>,\n<strong>paisajes inolvidables</strong> y <strong>experiencias auténticas</strong>. ¡Reserva hoy!",
+    "linkText": "VER TODOS LOS PAQUETES EN OFERTA",
+    "packageOne": {
+      "title": "Aventura Natural",
+      "duration": "2 Noches / 3 Días",
+      "description": "Sumérgete en paisajes únicos, explora los mogotes, y disfruta de actividades al aire libre que te conectarán con la esencia rural de Cuba.",
+      "price": "$250.00 por persona"
+    },
+    "packageTwo": {
+      "title": "Relax y Playa",
+      "duration": "3 Noches / 4 Días",
+      "description": "Un paquete diseñado para quienes buscan un equilibrio entre la tranquilidad del campo y la belleza de las playas cercanas. Perfecto para familias o grupos que desean combinar descanso y diversión.",
+      "price": "$250.00 por persona"
+    },
+    "packageThree": {
+      "title": "Romance en Viñales",
+      "duration": "2 Noches / 3 Días",
+      "description": "Déjate envolver por la magia de Viñales con un viaje romántico entre paisajes espectaculares, cenas íntimas y momentos de relajación inolvidables.",
+      "price": "$250.00 por persona"
+    },
+    "packageFour": {
+      "title": "Naturaleza y Tradición",
+      "duration": "2 Noches / 3 Días",
+      "description": "Vive una experiencia única en Viñales, donde la naturaleza y la tradición se fusionan en momentos de romance, aventura y relajación inolvidables.",
+      "price": "$00.00 por persona"
+    },
+    "packageFive": {
+      "title": "Viñales 360°",
+      "duration": "3 Noches / 4 Días",
+      "description": "Descubre la esencia de Viñales en un recorrido único entre valles, tradiciones y sabores auténticos, con actividades que te conectarán con su naturaleza y cultura.",
+      "price": "$00.00 por persona"
+    },
+    "packageSix": {
+      "title": "Viñales en Familia",
+      "duration": "4 Noches / 5 Días",
+      "description": "Diseñado especialmente para familias con niños, este paquete combina actividades educativas y recreativas que permitirán a todos disfrutar de una experiencia inolvidable en Viñales.",
+      "price": "$00.00 por persona"
+    }
+  },
+  "discoverServices": {
+    "header": {
+      "title": "Servicios e Instalaciones",
+      "description": "Disfruta de servicios excepcionales: <strong>gastronomía local, traslados y más.</strong>\n¡Todo para una estancia inolvidable!",
+      "linkText": "CONOCE NUESTROS SERVICIOS E INSTALACIONES"
+    },
+    "services": {
+      "gastronomy": {
+        "title": "Gastronomía",
+        "src": "assets/images/services/gastronomia.jpg",
+        "alt": "Servido en restaurante local, comida típica cubana"
+      },
+      "mobility": {
+        "title": "Movilidad",
+        "src": "assets/images/services/movilidad.jpg",
+        "alt": "Vehículo turístico para traslados en Viñales y zonas de Cuba"
+      },
+      "tripPlanner": {
+        "title": "Trip Planner",
+        "src": "assets/images/services/trip planner.jpg",
+        "alt": "Guía mostrando mapa y plan de viaje a visitantes"
+      },
+      "massages": {
+        "title": "Masajes",
+        "src": "assets/images/services/masajes.jpg",
+        "alt": "Masajista aplicando tratamiento relajante"
+      },
+      "laundry": {
+        "title": "Lavandería",
+        "src": "assets/images/services/lavandería.jpg",
+        "alt": "Ropa doblada y planchada en servicio de lavandería"
+      }
+    }
+  },
+  "servicesFacilities": {
+    "header": {
+      "title": "Servicios e instalaciones",
+      "description": "Descubre los servicios que harán de tu estancia una experiencia inolvidable"
+    },
+    "sections": [
+      {
+        "title": "Conoce nuestras instalaciones",
+        "description": "Ofrecemos una experiencia única con nuestras <strong>habitaciones independientes</strong>, proporcionando privacidad y comodidad. Disfruta de vistas panorámicas desde nuestras <strong>terrazas</strong>, perfectas para relajarse. Pasea por nuestros exuberantes <strong>jardines</strong> y sumérgete en la tranquilidad de la naturaleza. Además, contamos con una refrescante <strong>piscina</strong> para tu disfrute. Ven y vive una estancia inolvidable.",
+        "link": "Ver más sobre nuestras instalaciones"
+      },
+      {
+        "title": "Conoce nuestros servicios",
+        "description": "Disfruta de una deliciosa <strong>gastronomía cubana</strong> preparada por chefs locales, <strong>transporte</strong> para explorar la región, y la asistencia de nuestro <strong>gestor de viajes</strong> para que aproveches al máximo tu estancia. Además, contamos con servicio de <strong>lavandería, masajes</strong> relajantes para recargar energías y <strong>clases de baile</strong> para sumergirte en la cultura cubana.",
+        "link": "Ver más sobre nuestros servicios"
+      }
+    ]
+  },
+  "services": {
+    "header": {
+      "title": "Nuestros servicios",
+      "description": "Descubre servicios que harán de tu estancia una experiencia inolvidable."
+    },
+    "sections": [
+      {
+        "title": "Gastronomía",
+        "description": "En nuestro restaurante y bar, disfrutarás de la auténtica comida cubana, junto a opciones vegetarianas, italianas y mediterráneas. Ofrecemos desde desayunos hasta cenas, con aperitivos y meriendas para llevar si estás en movimiento. No te pierdas nuestra coctelería cubana, donde cada bebida refleja el sabor auténtico de Cuba. ¡Ven y saborea lo mejor de nuestra cocina!",
+        "features": {
+          "title": "Servicios:",
+          "items": [
+            "Desayunos",
+            "Cenas",
+            "Coctelería",
+            "Snacks",
+            "Para llevar",
+            "Wifi"
+          ]
+        }
+      }
+    ]
+  },
+  "experiencesContent": {
+    "header": {
+      "title": "Experiencias y aventuras",
+      "description": "Descubre aventuras inolvidables y experiencias únicas en Viñales."
+    },
+    "gallerySections": [
+      {
+        "leftImageAlt": "Instalaciones y vistas panorámicas de Villa Los Reyes",
+        "leftImageName": "Horse Riding 01",
+        "infoTitle": "Cabalgata en Viñales: naturaleza, cultura y tradición en cada paso",
+        "infoDescription": "Recorrer <strong>Viñales a caballo</strong> es una experiencia inmersiva que revela la esencia del <strong>paisaje cubano</strong>. Entre <strong>mogotes</strong> imponentes y verdes campos de <strong>tabaco</strong>, el recorrido permite descubrir <strong>fincas tradicionales</strong> donde se cultivan <strong>tabaco y café</strong> de forma artesanal. Esta actividad, accesible para todos los niveles, fomenta el <strong>turismo sostenible</strong>, fortaleciendo el vínculo con las <strong>comunidades locales</strong> y preservando el entorno natural.",
+        "linkText": "DESCUBRE TODAS LAS CABALGATAS",
+        "rightImages": [
+          {
+            "alt": "Cabalgando a la montaña",
+            "name": "Cabalgando a la montaña"
+          },
+          {
+            "alt": "Un paisaje fascinante",
+            "name": "Un paisaje fascinante"
+          },
+          {
+            "alt": "El sol poniente",
+            "name": "El sol poniente"
+          }
+        ]
+      },
+      {
+        "leftImageAlt": "Instalaciones y vistas panorámicas de Villa Los Reyes",
+        "leftImageName": "Hiking 01",
+        "infoTitle": "Senderismo en Viñales: entre montañas, valles y tradiciones vivas",
+        "infoDescription": "Adentrarse en los <strong>senderos de Viñales</strong> es descubrir un entorno vibrante donde la <strong>biodiversidad</strong>, el aire limpio y los <strong>paisajes montañosos</strong> marcan el ritmo de la <strong>caminata</strong>. Las rutas atraviesan <strong>valles fértiles y miradores naturales</strong>, mientras la interacción con <strong>campesinos</strong> del lugar revela <strong>costumbres agrícolas</strong> transmitidas por generaciones. Una experiencia enriquecedora que une aventura, cultura y respeto por el entorno.",
+        "linkText": "DESCUBRE TODOS LOS SENDERISMOS",
+        "rightImages": [
+          {
+            "alt": "Del infierno al paraíso",
+            "name": "Del infierno al paraíso"
+          },
+          {
+            "alt": "Amanecer increíble",
+            "name": "Amanecer increíble"
+          },
+          {
+            "alt": "Tabaco inside",
+            "name": "Tabaco inside"
+          }
+        ]
+      },
+      {
+        "leftImageAlt": "Instalaciones y vistas panorámicas de Villa Los Reyes",
+        "leftImageName": "Cycling 01",
+        "infoTitle": "Viñales sobre ruedas: una travesía entre naturaleza y tradición",
+        "infoDescription": "Recorrer <strong>Viñales en bicicleta</strong> es una forma dinámica y auténtica de conectar con sus <strong>paisajes emblemáticos</strong>. Los caminos serpentean entre <strong>mogotes</strong>, <strong>fincas de tabaco</strong> y escenarios <strong>rurales</strong> llenos de vida, permitiendo una inmersión total en el entorno. El contacto con <strong>campesinos</strong> y sus saberes tradicionales añade un valor cultural a esta experiencia activa, donde el movimiento se convierte en una forma de descubrir.",
+        "linkText": "DESCUBRE TODOS LOS CICLOTOURS",
+        "rightImages": [
+          {
+            "alt": "El Calvario",
+            "name": "El Calvario"
+          },
+          {
+            "alt": "El Resbaloso",
+            "name": "El Resbaloso"
+          },
+          {
+            "alt": "Recorriendo valles",
+            "name": "Recorriendo valles"
+          }
+        ]
+      },
+      {
+        "leftImageAlt": "Instalaciones y vistas panorámicas de Villa Los Reyes",
+        "leftImageName": "Beach 01",
+        "infoTitle": "Más allá del valle: experiencias únicas en Viñales",
+        "infoDescription": "<strong>Viñales</strong> sorprende con una <strong>diversidad</strong> de propuestas que van mucho más allá de sus <strong>paisajes montañosos</strong>. A pocos kilómetros, <strong>Cayo Jutías</strong> invita al descanso entre aguas turquesas y arenas blancas, perfectas para <strong>nadar</strong>, <strong>bucear</strong> o simplemente desconectar. En tierra firme, las <strong>fincas</strong> <strong>agroecológicas</strong> abren sus puertas al visitante con <strong>prácticas sostenibles y sabores auténticos</strong>. Un destino que combina <strong>naturaleza</strong>, <strong>sabor local</strong> y momentos de auténtica serenidad.",
+        "linkText": "DESCUBRE OTRAS EXPERIENCIAS",
+        "rightImages": [
+          {
+            "alt": "Una playa paradisíaca",
+            "name": "Una playa paradisíaca"
+          },
+          {
+            "alt": "Un día intenso",
+            "name": "Un día intenso"
+          },
+          {
+            "alt": "Viñales: day trip",
+            "name": "Viñales: day trip"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withInMemoryScrolling, withRouterConfig } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient } from '@angular/common/http';
@@ -10,12 +10,19 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideRouter(routes),
+    provideRouter(
+    routes,
+    withInMemoryScrolling({
+      scrollPositionRestoration: 'enabled', // vuelve al inicio
+      anchorScrolling: 'enabled',           // permite #anclas
+      
+    })
+  ),
 
     provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/',
+        prefix: '/assets/data/',
         suffix: '.json'
       }),
       fallbackLang: 'es',

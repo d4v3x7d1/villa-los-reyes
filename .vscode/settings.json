@@ -1,0 +1,87 @@
+{
+  "explorerSort.rules": [
+    {
+      "name": "Villa Los Reyes Pages",
+      "pathPattern": "**/src/app/pages/**",
+      "priorities": [
+        { "condition": "name === 'home-page'", "priority": 1000 },
+        { "condition": "name === 'about-page'", "priority": 999 },
+
+        { "condition": "name === 'services-facilities-page'", "priority": 998 },
+        { "condition": "name === 'services-page'", "priority": 997 },
+        { "condition": "name === 'rooms-page'", "priority": 996 },
+        { "condition": "name === 'room-one-page'", "priority": 995 },
+        { "condition": "name === 'room-two-page'", "priority": 994 },
+        { "condition": "name === 'room-three-page'", "priority": 993 },
+        { "condition": "name === 'room-four-page'", "priority": 992 },
+        { "condition": "name === 'room-five-page'", "priority": 991 },
+        { "condition": "name === 'facilities-page'", "priority": 990 },
+
+        { "condition": "name === 'experiences-page'", "priority": 989 },
+        { "condition": "name === 'horseback-riding-page'", "priority": 988 },
+        { "condition": "name === 'mountain-trail-page'", "priority": 987 },
+        { "condition": "name === 'fascinating-landscape-page'", "priority": 986 },
+        { "condition": "name === 'sunset-ride-page'", "priority": 985 },
+        { "condition": "name === 'valley-of-penitence-page'", "priority": 984 },
+
+        { "condition": "name === 'hiking-page'", "priority": 983 },
+        { "condition": "name === 'from-hell-to-paradise-page'", "priority": 982 },
+        { "condition": "name === 'incredible-sunrise-page'", "priority": 981 },
+        { "condition": "name === 'true-hiking-page'", "priority": 980 },
+        { "condition": "name === 'ancient-nature-page'", "priority": 979 },
+        { "condition": "name === 'eco-trail-page'", "priority": 978 },
+        { "condition": "name === 'tobacco-trail-page'", "priority": 977 },
+
+        { "condition": "name === 'cycle-tours-page'", "priority": 976 },
+        { "condition": "name === 'el-calvario-page'", "priority": 975 },
+        { "condition": "name === 'el-resbaloso-page'", "priority": 974 },
+        { "condition": "name === 'valley-ride-page'", "priority": 973 },
+        { "condition": "name === 'eco-farm-page'", "priority": 972 },
+        { "condition": "name === 'lake-visit-page'", "priority": 971 },
+
+        { "condition": "name === 'other-page'", "priority": 970 },
+        { "condition": "name === 'paradise-beach-page'", "priority": 969 },
+        { "condition": "name === 'intense-day-page'", "priority": 968 },
+        { "condition": "name === 'santo-tomas-caves-page'", "priority": 967 },
+        { "condition": "name === 'family-fun-page'", "priority": 966 },
+        { "condition": "name === 'day-trip-page'", "priority": 965 },
+        { "condition": "name === 'history-culture-nature-page'", "priority": 964 },
+
+        { "condition": "name === 'reviews-page'", "priority": 963 },
+        { "condition": "name === 'packages-page'", "priority": 962 },
+        { "condition": "name === 'booking-page'", "priority": 961 }
+      ]
+    },
+    {
+      "name": "Villa Los Reyes Sections",
+      "pathPattern": "**/src/app/components/sections/**",
+      "priorities": [
+        // Home Sections
+        { "condition": "name === 'carousel-section'", "priority": 1000 },
+        { "condition": "name === 'gallery-info-section'", "priority": 999 },
+        { "condition": "name === 'split-layout-section'", "priority": 998 },
+        { "condition": "name === 'header-section'", "priority": 997 },
+        { "condition": "name === 'experiences-section'", "priority": 996 },
+        { "condition": "name === 'services-section'", "priority": 995 },
+        { "condition": "name === 'packages-section'", "priority": 994 },
+        { "condition": "name === 'offers-section'", "priority": 993 },
+        { "condition": "name === 'home-room-section'", "priority": 992 },
+
+        // Rooms / Services Sections
+        { "condition": "name === 'rooms-section'", "priority": 991 },
+        { "condition": "name === 'grid-rooms-section'", "priority": 990 },
+        { "condition": "name === 'info-section'", "priority": 989 },
+
+        // Experiences Sections
+        { "condition": "name === 'gallery-tours-section'", "priority": 988 },
+        { "condition": "name === 'other-experiences-section'", "priority": 987 },
+
+        // Mov / Misc Sections
+        { "condition": "name === 'mov-section'", "priority": 986 }
+      ]
+    },
+
+  ],
+  "explorerSort.defaultSort": "name",
+  "explorerSort.showHiddenFiles": true
+}
