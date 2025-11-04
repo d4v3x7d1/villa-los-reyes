@@ -6,18 +6,24 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { getStorage, provideStorage } from '@angular/fire/storage';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideRouter(
-    routes,
-    withInMemoryScrolling({
-      scrollPositionRestoration: 'enabled', // vuelve al inicio
-      anchorScrolling: 'enabled',           // permite #anclas
-      
-    })
-  ),
+      routes,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'enabled', // vuelve al inicio
+        anchorScrolling: 'enabled',           // permite #anclas
+
+      })
+    ),
 
     provideHttpClient(),
     provideTranslateService({
@@ -28,6 +34,11 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'es',
       lang: 'es'
     })
+    ,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ]
 };
+
 
