@@ -1,35 +1,80 @@
 :host {
   display: block;
   background-color: #f7faf7;
-
 }
-/* '#E4EAE5' '#f7faf7'; */
 
 .rooms-section {
-
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-
-  width: 100%;
-  height: 100%;
-
-  min-height: 50rem;
-  padding: 5rem;
-  box-sizing: border-box;
-  overflow: hidden;
-
+  justify-content: center;
   background-color: #E4EAE5;
   border-radius: 3rem 3rem 0 0;
+  padding: 7.5rem 0 6.25rem 0rem;
+  overflow: hidden;
+}
+
+.rooms-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1600px;
+  gap: 3.75rem;
+  position: relative;
 }
 
 .info-container {
-  flex: 0 0 25%;
-  max-width: 40%;
-  align-self: center;
+  display: flex;
+  flex: 0 0 400px;
+  margin-left: max(5rem, calc((100vw - 1600px) / 2));
+  align-items: stretch;
 }
 
-.rooms-gallery {
-  flex: 1;
+/* Envoltura de la galería */
+.gallery-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media(max-width: 600px) {
+
+  .rooms-section {
+    padding: 1rem;
+    border-radius: 2rem;
+  }
+
+  .rooms-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .info-container {
+    margin-left: 0;
+    flex: 0 0 auto; /* o simplemente flex: none; */
+    align-self: center; /* opcional: centra el bloque en el eje cruzado */
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .gallery-wrapper {
+    width: 100%;
+    overflow: visible;
+  }
+
+  /* Mantiene la galería en scroll horizontal */
+  .rooms-gallery {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .room-link {
+    flex: 0 0 80%;
+    /* 👈 fuerza el desborde horizontal */
+  }
 }

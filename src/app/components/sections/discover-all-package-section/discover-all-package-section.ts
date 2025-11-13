@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { PackagesList } from "../../shared/packages-list/packages-list";
+import { PackagesList } from "../discover-package-section/packages-list/packages-list";
 
 @Component({
   selector: 'discover-all-package-section',

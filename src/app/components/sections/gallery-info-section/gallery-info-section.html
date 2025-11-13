@@ -1,8 +1,8 @@
 <section class="gallery-info-section" [class.reverse]="reverse()" [style.background]="color()">
-  <gallery-grid [mainImage]="mainImage()" [thumbImages]="thumbImages()" [mainHeight]="mainHeight()"
-    [thumbHeight]="thumbHeight()" />
+  <gallery-grid [mainImage]="mainImage()" [thumbImages]="thumbImages()"
+    />
 
-  <div>
+  <div class="info-column">
     <info-panel [title]="title()" [description]="description()" [link]="link()" [style.width]="panelWidth()" />
 
     @if (featuresTitle() && features()) {
@@ -10,3 +10,4 @@
     }
   </div>
 </section>
+

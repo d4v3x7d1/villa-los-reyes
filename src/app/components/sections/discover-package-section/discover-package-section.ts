@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { SectionHeader } from '../../shared/section-header/section-header';
-import { PackagesList } from '../../shared/packages-list/packages-list';
+import { PackagesList } from './packages-list/packages-list';
 
 @Component({
   selector: 'discover-package-section',

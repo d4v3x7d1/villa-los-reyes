@@ -1,0 +1,94 @@
+.room-item {
+  font-family: Poppins, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.25rem;
+
+  width: 28rem;
+  aspect-ratio: 1 / 1;
+
+  padding: 2rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.room-item img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.room-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.room-item .room-name,
+.room-item .room-details {
+  position: absolute;
+  z-index: 2;
+  padding: 0.25rem 0.5rem;
+  max-width: 90%;
+  white-space: normal;
+  word-break: break-word;
+  color: #FFF;
+}
+
+.room-item .room-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.375rem;
+  bottom: 4rem;
+  letter-spacing: 0.00625rem;
+}
+
+.room-item .room-details {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  letter-spacing: 0.03125rem;
+  bottom: 2.5rem;
+}
+
+.room-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .room-item {
+    width: 16rem;
+    aspect-ratio: 1 / 1;
+    padding: 1rem;
+    gap: 0.15rem;
+  }
+
+  .room-item .room-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.0625rem; /* 106.25% */
+    letter-spacing: 0.00625rem;
+    bottom: 3rem;
+  }
+
+  .room-item .room-details {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.0625rem; /* 141.667% */
+    letter-spacing: 0.025rem;
+    bottom: 0.75rem;
+  }
+}

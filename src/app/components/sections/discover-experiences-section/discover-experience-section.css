@@ -1,23 +1,28 @@
 :host {
   display: block;
   background: #E4EAE5;
-
 }
-/* '#E4EAE5' '#f7faf7'; */
+
 .discover-experiences-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 3.25rem;
 
-  width: 100%;
-   padding: 5rem;
-
+  padding: 5rem 5rem 6.25rem;
   border-radius: 3rem 3rem 0 0;
   background: #f7faf7;
-
   overflow: hidden;
-
-  min-height: 50rem;
-
 }
+
+
+
+@media (max-width: 600px) {
+  .discover-experiences-section {
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 2rem 2rem 0 0;
+    justify-content: center;
+  }
+}
+

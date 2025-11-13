@@ -1,18 +1,15 @@
 .services-gallery {
   display: flex;
+  /* justify-content: center; */
   width: 100%;
-  overflow: hidden;
-  gap: 0;
+  overflow: auto;
 }
 
-.services-gallery service-item {
-  flex: 1;
-  aspect-ratio: 1 / 1;
+.services-gallery::-webkit-scrollbar{
+  display: none;
 }
-
 
 .service-link {
   display: block;
   text-decoration: none;
-  flex: 1;
 }

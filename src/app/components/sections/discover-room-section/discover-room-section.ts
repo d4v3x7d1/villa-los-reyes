@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { InfoPanel } from '../../shared/info-panel/info-panel';
-import { RoomsGallery } from '../../shared/rooms-gallery/rooms-gallery';
+import { RoomsGallery } from './rooms-gallery/rooms-gallery';
 
 @Component({
   selector: 'discover-room-section',

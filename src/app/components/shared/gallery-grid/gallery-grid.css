@@ -1,3 +1,9 @@
+:host {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -46,4 +52,26 @@
     rgba(0, 0, 0, 0.1)
   );
   pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap:0.5rem;
+  }
+
+  .main-image-wrapper {
+    grid-column: span 6;
+    border-radius: 0.5rem;
+  }
+
+  .thumb-image-wrapper {
+    grid-column: span 2;
+    border-radius: 0.5rem;
+  }
+
+  /* Si solo hay 2 thumbs → que ocupen mitad y mitad */
+  .gallery-grid:has(.thumb-image-wrapper:nth-last-child(2):nth-child(2)) .thumb-image-wrapper {
+    grid-column: span 3;
+  }
 }

@@ -1,0 +1,28 @@
+.packages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 32rem);
+  /* columnas flexibles de 32rem mínimo */
+  /* justify-content: center; */
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+  overflow: auto;
+}
+
+.packages-list::-webkit-scrollbar {
+  display: none;
+}
+
+.package-link {
+  text-decoration: none;
+  display: block;
+}
+
+@media(max-width:600px) {
+  .packages-list {
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+
+  }
+
+}

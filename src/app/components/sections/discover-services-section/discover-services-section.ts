@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { SectionHeader } from "../../shared/section-header/section-header";
-import { ServicesGallery } from "../../shared/services-gallery/services-gallery";
+import { ServicesGallery } from "./services-gallery/services-gallery";
 
 @Component({
   selector: 'discover-services-section',

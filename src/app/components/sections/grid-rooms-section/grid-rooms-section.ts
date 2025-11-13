@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { RoomItem } from "../../shared/room-item/room-item";
+import { RoomItem } from "../discover-room-section/rooms-gallery/room-item/room-item";
 import { InfoPanel } from "../../shared/info-panel/info-panel";
 
 @Component({

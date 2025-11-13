@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-
-
+/* ==========================
+   NAVBAR BASE (desktop)
+   ========================== */
 .navbar {
   display: flex;
   height: 90px;
@@ -10,32 +10,33 @@
   padding: 14px 80px;
   background-color: #00513D;
   font-family: "Poppins", sans-serif;
+  gap: 60px;
+  position: relative;
+  z-index: 2000; /* el navbar siempre por encima */
+}
+
+.navbar-logo img {
+  display: block;
 }
 
 .navbar-menu {
   display: flex;
   align-items: stretch;
-  margin-left: 60px;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .navbar-menu li {
   display: inline-flex;
-  /* ancho depende del contenido */
   flex-direction: column;
-  /* para que el texto largo pueda ir a otra línea */
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* centra el texto dentro del li */
   padding: 4px 12px;
-  /* padding interno */
   max-width: 150px;
-  /* opcional, limita la anchura de cada li */
 }
 
-/* Enlaces */
 .navbar-menu a {
   text-decoration: none;
   color: #FFF;
@@ -47,7 +48,6 @@
 
 .navbar-menu li.active {
   position: relative;
-  /* necesario para el ::after */
 }
 
 .navbar-menu li.active a {
@@ -58,22 +58,16 @@
   content: '';
   position: absolute;
   bottom: 4px;
-  /* al fondo del li */
   width: 80%;
-  /* ancho de la línea */
   height: 4px;
-  /* grosor */
   background-color: #F49516;
   border-radius: 3px 3px 0 0;
-  /* bordes redondeados */
 }
-
 
 .navbar-menu a:hover {
   color: #F49516;
 }
 
-/* Botón reservar */
 .btn-reservar {
   padding: 12px 24px;
   border: none;
@@ -90,5 +84,108 @@
 
 .btn-reservar:hover {
   background: #ffb553;
+}
+
+/* Icono (por defecto oculto) */
+.menu-toggle {
+  display: none;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.menu-toggle .material-symbols-outlined {
+  font-size: 3rem;       /* tamaño 3 rem */
+  color: #F49516;        /* color dorado */
+}
+
+
+/* ==========================
+   RESPONSIVE: <= 1328px
+   ========================== */
+@media (max-width: 1328px) {
+  .navbar {
+    padding: 14px 32px;
+  }
+
+  /* Mostrar el icono del menú */
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 34px;
+    z-index: 2100;
+    /* sobre el overlay y el panel */
+  }
+
+  /* Convertimos la misma lista en panel lateral */
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 270px;
+    height: 100vh;
+    margin: 0;
+    padding: 100px 1.5rem 1.5rem;
+    background-color: #00513D;
+    box-shadow: -3px 0 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(.2, .9, .2, 1);
+    z-index: 1800;
+    list-style: none;
+    overflow-y: auto;
+    visibility: hidden; /* 🔧 evita el pantallazo */
+  }
+
+  /* Solo visible cuando se abre */
+  .navbar-menu.open {
+    transform: translateX(0);
+    visibility: visible; /* 🔧 se muestra solo al abrir */
+  }
+
+  .navbar-menu li {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 0;
+    max-width: none;
+  }
+
+  .navbar-menu a {
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .btn-reservar {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* Overlay detrás del panel lateral */
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 1700; /* 🔧 debajo del panel lateral (1800) */
+    animation: fadeIn 0.28s forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 }
 

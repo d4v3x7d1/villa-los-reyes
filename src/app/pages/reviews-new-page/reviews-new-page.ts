@@ -7,13 +7,13 @@ import { Review, ReviewsService } from '../../services/reviews';
 import { MainHeaderSection } from "../../components/sections/main-header-section/main-header-section";
 
 @Component({
-  selector: 'reviews-page',
+  selector: 'reviews-new-page',
   standalone: true,
   imports: [CommonModule, FormsModule, DatePipe, MainHeaderSection],
-  templateUrl: './reviews-page.html',
-  styleUrls: ['./reviews-page.css'],
+  templateUrl: './reviews-new-page.html',
+  styleUrls: ['./reviews-new-page.css'],
 })
-export class ReviewsPage {
+export class ReviewsNewPage {
 
   header = {
     title: 'Reseñas y comentarios',
@@ -44,7 +44,6 @@ export class ReviewsPage {
   });
 
   constructor() {
-    // ✅ Subscribir manualmente porque estamos sin Zone.js
     this.reviewsService.reviews$.subscribe((items) => {
       this.reviews.update(() => items);
       this.cdr.detectChanges(); // Fuerza actualización inmediata

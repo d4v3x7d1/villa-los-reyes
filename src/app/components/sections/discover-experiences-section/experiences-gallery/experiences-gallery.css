@@ -1,0 +1,37 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.experiences-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 0.5rem;
+
+}
+
+/* Enlace de cada elemento */
+.experience-link {
+  text-decoration: none;
+  flex: 0 0 auto;
+  /* mantiene tamaño fijo sin encogerse */
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.experience-link:hover {
+  transform: translateY(-6px);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 600px) {
+  .experiences-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+}

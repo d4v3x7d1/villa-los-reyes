@@ -1,0 +1,27 @@
+.rooms-gallery {
+  display: flex;
+  gap: 1.5rem;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+   /* scroll-padding-left: 1rem; */
+}
+
+.rooms-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.room-link {
+  text-decoration: none;
+  display: block;
+
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+

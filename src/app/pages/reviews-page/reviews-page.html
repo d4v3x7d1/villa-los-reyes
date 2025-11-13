@@ -1,15 +1,16 @@
 <div class="reviews-page">
 
-  <!-- Lista de reseñas -->
+  <main-header-section [head]="{ title: header.title, description: header.description }" />
+
+
   <section class="reviews-list">
     @if (paginatedReviews().length) {
       @for (review of paginatedReviews(); track review.id) {
         <article class="review-card">
           <header class="review-header">
             <div class="user-block">
-              <img [src]="review.userPhoto || '/assets/images/default-avatar.png'"
-                   alt="Avatar del usuario"
-                   class="user-avatar">
+              <img [src]="review.userPhoto || '/assets/images/avatar/avatar-default.svg'"
+                   alt="Avatar del usuario" class="user-avatar">
               <div class="user-info">
                 <span class="user-name">{{ review.userName }}</span>
                 <div class="review-meta">
@@ -19,9 +20,7 @@
                          [style.color]="review.rating >= s ? '#F49516' : '#ccc'"></i>
                     }
                   </div>
-                  <time class="review-date">
-                    {{ review.createdAt ? (review.createdAt | date:'mediumDate') : '' }}
-                  </time>
+                  <time class="review-date">{{ review.createdAt ? (review.createdAt | date:'mediumDate') : '' }}</time>
                 </div>
               </div>
             </div>
@@ -30,10 +29,12 @@
           <p class="review-text">{{ review.comment }}</p>
 
           <footer class="review-footer">
-            <p class="useful-summary">{{ review.usefulCount || 0 }} personas la han encontrado útil</p>
+            <p class="useful-summary">
+              {{ review.usefulCount || 0 }} personas la han encontrado útil
+            </p>
             <div class="useful-actions">
               <span class="useful-question">¿Te ha parecido útil esta opinión?</span>
-              <button class="btn-useful" (click)="markUseful(review)">Sí 👍</button>
+              <button class="btn-useful" (click)="markUseful(review,true)">Sí 👍</button>
             </div>
           </footer>
         </article>
@@ -49,14 +50,12 @@
     }
   </section>
 
-  <!-- Formulario de reseña -->
-  @if (user()) {
-    <section class="review-form">
+  <section class="review-form">
+    @if (user()) {
       <div class="form-header">
         <div class="user-block">
           <img [src]="user()?.photoURL || '/assets/images/default-avatar.png'"
-               alt="Avatar del usuario"
-               class="user-avatar">
+               alt="Avatar del usuario" class="user-avatar">
           <span class="user-name">{{ user()?.displayName || 'Usuario' }}</span>
         </div>
       </div>
@@ -66,21 +65,21 @@
 
         <div class="review-stars interactive">
           @for (s of stars; track s) {
-            <i class="fa-solid fa-star star-icon" (click)="rating = s" [style.color]="rating >= s ? '#F49516' : '#ccc'"></i>
+            <i class="fa-solid fa-star star-icon"
+               (click)="rating = s"
+               [style.color]="rating >= s ? '#F49516' : '#ccc'"></i>
           }
         </div>
 
-        <textarea [(ngModel)]="comment" class="form-textarea" placeholder="Describe tu experiencia (opcional)" maxlength="500" rows="4"></textarea>
-
+        <textarea [(ngModel)]="comment" class="form-textarea" placeholder="Describe tu experiencia"
+                  maxlength="500" rows="4"></textarea>
         <div class="char-counter">{{ commentLength }}/500 caracteres</div>
-
-        <p class="form-note">Tu opinión nos ayuda a mejorar y ofrecerte un mejor servicio.</p>
 
         <button class="form-submit" (click)="sendReview()">Enviar</button>
       </div>
-    </section>
-  } @else {
-    <p class="login-hint">Inicia sesión para dejar una reseña.</p>
-  }
+    } @else {
+      <p class="login-hint">Inicia sesión para dejar una reseña.</p>
+    }
+  </section>
 
 </div>

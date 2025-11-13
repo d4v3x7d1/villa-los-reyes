@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { ExperienceItemComponent } from "../experience-item/experience-item";
+import { ExperienceItemComponent } from "./experience-item/experience-item";
 import { RouterLink } from '@angular/router';
 
 @Component({

@@ -1,10 +1,12 @@
 <section class="rooms-section">
-  <div class="info-container">
-    <info-panel [title]="info().title" [description]="info().description" [link]="info().link">
-    </info-panel>
-  </div>
+  <div class="rooms-container">
+    <div class="info-container">
+      <info-panel [title]="info().title" [description]="info().description" [link]="info().link">
+      </info-panel>
+    </div>
 
-  <div class="gallery-container">
-    <rooms-gallery [rooms]="rooms()"></rooms-gallery>
+    <div class="gallery-wrapper">
+      <rooms-gallery [rooms]="rooms()"></rooms-gallery>
+    </div>
   </div>
 </section>

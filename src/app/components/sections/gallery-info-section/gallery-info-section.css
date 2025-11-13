@@ -1,7 +1,8 @@
 :host {
   display: block;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  background: transparent;
 }
 
 .gallery-info-section {
@@ -10,33 +11,67 @@
   position: relative;
   justify-content: center;
   align-items: flex-start;
-
-  /* min-height: 50rem; */
   overflow: hidden;
   padding: 5rem;
   border-radius: 3rem 3rem 0 0;
   gap: 4rem;
+
 }
 
-/* Columna izquierda (imágenes) */
-.gallery-info-section> :first-child {
-  flex: 0 0 60%;
-  min-width: 25rem;
-  order: 1;
-}
-
-/* Columna derecha (texto) */
-.gallery-info-section> :nth-child(2) {
-  flex: 1 1 40%;
+/* Columna de info */
+.info-column {
+  flex: 0 1 40%;
   min-width: 20rem;
-  order: 2;
 }
 
-
-.gallery-info-section.reverse> :first-child {
-  order: 2;
+/* Galería de imágenes */
+.gallery-info-section>gallery-grid {
+  flex: 1 1 60%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: hidden;
 }
 
-.gallery-info-section.reverse> :nth-child(2) {
+/* Reverso */
+.gallery-info-section.reverse>.info-column {
   order: 1;
+}
+
+.gallery-info-section.reverse>gallery-grid {
+  order: 2;
+}
+
+/* ==========================
+   MÓVIL VERTICAL
+   ========================== */
+@media (max-width: 600px) {
+  .gallery-info-section {
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1.5rem 1.5rem 0 0;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .info-column {
+    order: 1;
+    flex: 1 1 auto;
+    max-width: 400px;
+    width: 100%;
+    min-width: 0;
+    margin-inline: auto;
+
+  }
+
+  .gallery-info-section>gallery-grid {
+    order: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+
+    min-width: unset;
+  }
 }

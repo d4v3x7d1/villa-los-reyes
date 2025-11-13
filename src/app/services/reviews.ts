@@ -1,21 +1,28 @@
-import { Injectable, inject, EnvironmentInjector, runInInjectionContext } from '@angular/core';
+import {
+  Injectable,
+  inject,
+  EnvironmentInjector,
+  runInInjectionContext,
+  signal,
+} from '@angular/core';
 import {
   Firestore,
   collection,
-  collectionData,
   addDoc,
+  collectionData,
   doc,
   runTransaction,
   query,
   orderBy,
 } from '@angular/fire/firestore';
-import { map, Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs';
 import { AuthService } from './auth';
 
 export interface Review {
   id: string;
   userId: string;
   userName: string;
+  userEmail?: string;
   userPhoto: string;
   rating: number;
   comment: string;
@@ -26,44 +33,47 @@ export interface Review {
 
 @Injectable({ providedIn: 'root' })
 export class ReviewsService {
-  private readonly firestore = inject(Firestore);
-  private readonly auth = inject(AuthService);
-  private readonly env = inject(EnvironmentInjector);
+  private firestore = inject(Firestore);
+  private auth = inject(AuthService);
+  private env = inject(EnvironmentInjector);
+  private ref = collection(this.firestore, 'reviews');
 
-  private readonly ref = collection(this.firestore, 'reviews');
-
-  /**
-   * Observable público de reseñas (ordenadas por createdAt desc).
-   * Mantenlo público para que los componentes puedan convertirlo a Signal.
-   */
-  public readonly reviews$: Observable<Review[]> = runInInjectionContext(this.env, () =>
+  /** 🔹 Stream público (ahora no es privado) */
+  readonly reviews$ = runInInjectionContext(this.env, () =>
     collectionData(query(this.ref, orderBy('createdAt', 'desc')), { idField: 'id' }).pipe(
       map((docs: any[]) =>
-        (docs || []).map((d) => ({
-          id: d.id ?? '',
-          userId: d.userId,
-          userName: d.userName,
-          userPhoto: d.userPhoto || '',
-          rating: Number(d.rating) || 0,
-          comment: d.comment || '',
-          usefulBy: Array.isArray(d.usefulBy) ? d.usefulBy : [],
-          usefulCount: Array.isArray(d.usefulBy) ? d.usefulBy.length : Number(d.usefulCount) || 0,
-          createdAt:
-            d.createdAt?.toDate?.() ??
-            (typeof d.createdAt === 'string' ? new Date(d.createdAt) : null),
-        } as Review))
-      )
+        docs.map(
+          (d) =>
+            ({
+              id: d.id,
+              userId: d.userId,
+              userName: d.userName,
+              userEmail: d.userEmail || '',
+              userPhoto: d.userPhoto || '',
+              rating: Number(d.rating) || 0,
+              comment: d.comment || '',
+              usefulBy: Array.isArray(d.usefulBy) ? d.usefulBy : [],
+              usefulCount: Array.isArray(d.usefulBy)
+                ? d.usefulBy.length
+                : Number(d.usefulCount) || 0,
+              createdAt:
+                d.createdAt?.toDate?.() ??
+                (typeof d.createdAt === 'string' ? new Date(d.createdAt) : null),
+            }) as Review
+        )
+      ),
+      shareReplay(1)
     )
   );
 
-  /** Añadir una reseña (requiere usuario logueado) */
   async addReview(comment: string, rating: number) {
     const user = this.auth.getCurrentUser();
-    if (!user) throw new Error('Debes iniciar sesión para dejar una reseña.');
+    if (!user) throw new Error('Debes iniciar sesión para opinar.');
 
     const newReview = {
       userId: user.uid,
       userName: user.displayName || 'Usuario',
+      userEmail: user.email || '',
       userPhoto: user.photoURL || '',
       rating,
       comment,
@@ -75,22 +85,40 @@ export class ReviewsService {
     await runInInjectionContext(this.env, () => addDoc(this.ref, newReview));
   }
 
-  /** Marcar / desmarcar como útil (transacción) */
-  async markAsUseful(reviewId: string) {
-    const user = this.auth.getCurrentUser();
-    if (!user) throw new Error('Debes iniciar sesión para marcar como útil.');
 
-    const reviewRef = doc(this.firestore, `reviews/${reviewId}`);
-    await runInInjectionContext(this.env, () =>
-      runTransaction(this.firestore, async (tx) => {
-        const snap = await tx.get(reviewRef);
-        if (!snap.exists()) throw new Error('Reseña no encontrada.');
-        const data = snap.data() as any;
-        const usefulBy: string[] = Array.isArray(data.usefulBy) ? data.usefulBy : [];
-        const already = usefulBy.includes(user.uid);
-        const newList = already ? usefulBy.filter((id) => id !== user.uid) : [...usefulBy, user.uid];
-        tx.update(reviewRef, { usefulBy: newList, usefulCount: newList.length });
-      })
-    );
-  }
+  async markAsUseful(reviewId: string, markUseful: boolean) {
+  const user = this.auth.getCurrentUser();
+  if (!user) throw new Error('Inicia sesión primero.');
+
+  const ref = doc(this.firestore, `reviews/${reviewId}`);
+  await runInInjectionContext(this.env, () =>
+    runTransaction(this.firestore, async (tx) => {
+      const snap = await tx.get(ref);
+      if (!snap.exists()) throw new Error('Reseña no encontrada.');
+
+      const data = snap.data() as Review;
+      const list = Array.isArray(data.usefulBy) ? data.usefulBy : [];
+
+      let newList = list;
+
+      if (markUseful) {
+        // agregar usuario solo si no estaba
+        if (!list.includes(user.uid)) {
+          newList = [...list, user.uid];
+        }
+      } else {
+        // remover usuario solo si estaba
+        if (list.includes(user.uid)) {
+          newList = list.filter((id) => id !== user.uid);
+        }
+      }
+
+      // actualizar si hubo cambios
+      if (newList !== list) {
+        tx.update(ref, { usefulBy: newList, usefulCount: newList.length });
+      }
+    })
+  );
+}
+
 }

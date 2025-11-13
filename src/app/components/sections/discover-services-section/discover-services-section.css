@@ -1,7 +1,8 @@
-:host{
+:host {
   display: block;
   background-color: #f7faf7;
 }
+
 /* '#E4EAE5' '#f7faf7'; */
 
 .services-section {
@@ -11,8 +12,20 @@
   width: 100%;
   background-color: #E4EAE5;
 
-  padding: 4rem 0;
+  padding: 5rem 0 8.75rem 0;
   position: relative;
   border-radius: 3rem 3rem 0 0;
 
+}
+
+@media(max-width:600px) {
+  .services-section {
+
+    padding: 1rem 0;
+  }
+
+  section-header {
+    padding: 1rem;
+
+  }
 }

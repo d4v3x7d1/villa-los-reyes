@@ -19,8 +19,8 @@ import { galleryAmazingSunrise, galleryAntiquityAndNature, galleryEcologicalAgri
 import { DiscoverPackageDefaultAll } from './presets/discover-package-default-all/discover-package-default-all';
 import { PackagesPage } from './pages/packages-page/packages-page';
 import { PackageBasePage } from './components/base-pages/package-base-page/package-base-page';
-import { ReviewsComponent } from './pages/reviews-component/reviews-component';
 import { ReviewsPage } from './pages/reviews-page/reviews-page';
+import { ReviewsNewPage } from './pages/reviews-new-page/reviews-new-page';
 
 export const routes: Routes = [
   { path: '', component: ButtonNavPage, pathMatch: 'full' }, // '/' muestra solo la botonera
@@ -303,10 +303,11 @@ export const routes: Routes = [
     path: 'PackageBasePage',
     component: PackageBasePage
   },
+
   {
-    path: 'ReviewPage',
-    component: ReviewsComponent
-  }
+    path: 'new-reviews',
+    component:ReviewsNewPage
+  },
 
 
 ];
