@@ -8,14 +8,13 @@
     alt: 'about.mainHeader.imageAlt'
   }" [objectPosition]="'50% 75%'" />
 
-
   <gallery-info-section
-    [mainImage]="{ src: '/assets/images/gallery/slide-terrace.jpg', alt: 'images.aboutSection.mainAlt' }" [thumbImages]="[
-    { src: '/assets/images/gallery/slide-room.jpg', alt: 'images.aboutSection.thumb1Alt' },
-    { src: '/assets/images/gallery/slide-restaurant.jpg', alt: 'images.aboutSection.thumb2Alt' },
-    { src: '/assets/images/gallery/slide-solar-panels.jpg', alt: 'images.aboutSection.thumb3Alt' }
+    [mainImage]="{ src: 'assets/images/gallery/slide-terrace.jpg', alt: 'images.aboutSection.mainAlt' }" [thumbImages]="[
+    { src: 'assets/images/gallery/slide-room.jpg', alt: 'images.aboutSection.thumb1Alt' },
+    { src: 'assets/images/gallery/slide-restaurant.jpg', alt: 'images.aboutSection.thumb2Alt' },
+    { src: 'assets/images/gallery/slide-solar-panels.jpg', alt: 'images.aboutSection.thumb3Alt' }
   ]" [title]="'about.info.title'" [description]="'about.info.description'"
-    [link]="{ text: 'about.info.button', url: '/about' }" />
+    [link]="{ text: 'about.info.button', url: '/about' }" [panelWidth]="'600px'" [hasHostBg]="false" />
 
   <!-- Sección Ubicación -->
   <split-layout-section class="location-section" [info]="{

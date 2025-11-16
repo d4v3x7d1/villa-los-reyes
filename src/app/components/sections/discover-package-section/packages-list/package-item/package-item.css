@@ -4,12 +4,10 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 2rem 2.875rem;
+  padding: 2rem 2.8rem;
   width: 100%;
   max-width: 32rem;
-
   aspect-ratio: 1 / 1;
-
   gap: 0.25rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -18,7 +16,6 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
   z-index: 0;
-
 }
 
 
@@ -135,22 +132,18 @@
 
 .package-overlay .price {
 
-  /* M3/title/large */
   font-family: Poppins;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
   line-height: 2.375rem;
-  /* 135.714% */
   color: #80ff80;
   margin-top: 0.25rem;
 }
 
 @media (max-width: 600px) {
   .package-item {
-    max-width: 19.375rem;
-    padding: 1rem 1.5rem;
-    aspect-ratio: 1 / 1;
+    flex: 1 1 20rem;
   }
 
   .package-overlay {

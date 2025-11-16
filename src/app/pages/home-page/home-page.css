@@ -1,6 +1,6 @@
-:host{
+:host {
   display: block;
-  width: 100hw;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -12,4 +12,3 @@ gallery-info-section {
   display: block;
   transition: opacity 0.5s ease-in-out;
 }
-

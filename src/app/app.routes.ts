@@ -23,8 +23,8 @@ import { ReviewsPage } from './pages/reviews-page/reviews-page';
 import { ReviewsNewPage } from './pages/reviews-new-page/reviews-new-page';
 
 export const routes: Routes = [
-  { path: '', component: ButtonNavPage, pathMatch: 'full' }, // '/' muestra solo la botonera
-
+  // { path: '', component: ButtonNavPage, pathMatch: 'full' }, // '/' muestra solo la botonera
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePage },
   { path: 'about', component: AboutPage },
 
@@ -295,19 +295,19 @@ export const routes: Routes = [
     component: PackagesPage // ← el componente que se mostrará
   },
 
-  {
-    path: 'reviews',
-    component: ReviewsPage
-  },
+  // {
+  //   path: 'reviews',
+  //   component: ReviewsPage
+  // },
   {
     path: 'PackageBasePage',
     component: PackageBasePage
   },
 
   {
-    path: 'new-reviews',
-    component:ReviewsNewPage
+    path: 'reviews',
+    component: ReviewsNewPage
   },
 
-
+  { path: '**', redirectTo: '/home' }
 ];

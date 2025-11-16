@@ -77,3 +77,38 @@
 .split-layout.reverse .visual-container {
   order: 2;
 }
+
+@media (max-width: 600px) {
+  .split-layout {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 0rem;
+    align-items: center;
+
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  .split-layout.reverse .visual-container,
+  .split-layout .visual-container {
+    order: 1;
+  }
+
+  .split-layout.reverse .text-container,
+  .split-layout .text-container {
+    order: 2;
+  }
+
+  .split-layout>.visual-container {
+    width: 100%;
+    max-width: 470px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .visual-container img,
+  .visual-container .map-frame {
+    height: 100%;
+    width: 100%;
+  }
+}

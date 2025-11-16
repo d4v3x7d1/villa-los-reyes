@@ -13,6 +13,8 @@ import { LangSelector } from './lang-selector/lang-selector';
 export class NavbarSection {
 
   menuOpen = false;
+  lastScroll = 0;
+  navbarHidden = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -25,5 +27,20 @@ export class NavbarSection {
       this.menuOpen = false;
     }
 
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > this.lastScroll && currentScroll > 80) {
+      // 🔽 Bajando → ocultar
+      this.navbarHidden = true;
+    } else {
+      // 🔼 Subiendo → mostrar
+      this.navbarHidden = false;
+    }
+
+    this.lastScroll = currentScroll;
   }
 }

@@ -1,28 +1,42 @@
 .packages-list {
-  display: grid;
-  grid-template-columns: repeat(3, 32rem);
-  /* columnas flexibles de 32rem mínimo */
-  /* justify-content: center; */
-  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
   gap: 1.5rem;
   width: 100%;
-  overflow: auto;
+  scrollbar-width: none;
 }
 
 .packages-list::-webkit-scrollbar {
   display: none;
 }
 
+/* Cada tarjeta */
 .package-link {
   text-decoration: none;
   display: block;
+
+  /* Fijo: no crece, no se encoge, mide 32rem */
+  flex: 0 0 32rem;
+  max-width: 32rem;
 }
 
-@media(max-width:600px) {
-  .packages-list {
-    grid-template-columns: repeat(1, 1fr);
-    overflow: hidden;
 
+@media(max-width: 600px) {
+  .packages-list {
+    flex-direction: column;
+    /* overflow: visible; */
+    align-items: center;
+    padding: 0.5rem;
+    gap: 1rem;
   }
 
+  .package-link {
+    flex: none;
+    width: 100%;
+    max-width: 21rem; /* Ajusta si quieres más ancho */
+  }
 }
+

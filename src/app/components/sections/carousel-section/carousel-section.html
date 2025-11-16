@@ -1,33 +1,43 @@
 <div class="carousel-container">
   @for (slide of slides(); let i = $index; track i) {
-  @if (current() === i) {
-  <img class="carousel-image" [src]="slide.src" [alt]="slide.altKey | translate" />
-  <div class="carousel-overlay">
+    @if (current() === i) {
 
+      <img class="carousel-image" [src]="slide.src" [alt]="slide.altKey | translate" />
 
-    <div class="text-content">
-      <h1>{{ slide.titleKey | translate }}</h1>
-      <p>{{ slide.subtitleKey | translate }}</p>
-      <div class="indicator-container">
-        @for (slide of slides(); let i = $index; track i) {
-        <button class="indicator" [class.active]="current() === i" [style.width.px]="12 + i * 2"
-          [style.height.px]="12 + i * 2" (click)="goToSlide(i)">
-        </button>
-        }
+      <div class="carousel-overlay">
+
+        <div class="text-content">
+          <h1>{{ slide.titleKey | translate }}</h1>
+          <p>{{ slide.subtitleKey | translate }}</p>
+
+          <div class="indicator-container">
+            @for (slide of slides(); let i = $index; track i) {
+              <button
+                class="indicator"
+                [class.active]="current() === i"
+                [style.width.px]="getIndicatorSize(i)"
+                [style.height.px]="getIndicatorSize(i)"
+                (click)="goToSlide(i)">
+              </button>
+            }
+          </div>
+
+        </div>
+
+        <div class="left-side">
+          <button class="nav-button prev" (click)="prev()">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+        </div>
+
+        <div class="right-side">
+          <button class="nav-button next" (click)="next()">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
       </div>
-    </div>
-    <div class="left-side">
-      <button class="nav-button prev" (click)="prev()"><i class="fa-solid fa-angle-left"></i></button>
 
-    </div>
-    <div class="right-side">
-      <button class="nav-button next" (click)="next()"><i class="fa-solid fa-angle-right"></i></button>
-
-    </div>
-
-  </div>
+    }
   }
-  }
-
-
 </div>

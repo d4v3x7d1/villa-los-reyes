@@ -2,8 +2,8 @@
 
   position: relative;
   display: flex;
-  flex-direction: column-reverse;
-
+  flex-direction: column;
+  justify-content: flex-end;
   width: 100%;
   max-width: 100%;
   height: 120vh;
@@ -122,4 +122,42 @@
 .indicator.active {
   background-color: #D17D00;
   transform: scale(1.6);
+}
+
+@media (max-width: 600px) {
+
+  .carousel-container {
+    padding: 16rem 0.5rem 10rem;
+    height: 90vh;
+  }
+
+  .text-content h1 {
+    font-size: 1.875rem;
+    /* 30px */
+    font-weight: 700;
+    line-height: 2.25rem;
+    /* 36px */
+  }
+
+  .text-content p {
+    font-size: 0.8rem;
+    /* 12px */
+    font-weight: 400;
+    line-height: 1.25rem;
+    /* 20px */
+    letter-spacing: 0.00625rem;
+  }
+
+  .carousel-overlay {
+    min-height: 0;
+    gap: 0.5rem;
+    /* flex-wrap: wrap; */
+  }
+
+  .nav-button {
+    font-size: 32px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
 }
