@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DiscoverServicesSection } from '../../components/sections/discover-services-section/discover-services-section';
+import { servicesContent } from '../../config/services-data';
 
 @Component({
   selector: 'discover-services-default',
@@ -23,41 +24,44 @@ export class DiscoverServicesDefault {
     link: { text: 'discoverServices.header.linkText', url: '/services-facilities' }
   };
 
+
   services = [
     {
-      src: '/assets/images/restaurant/slide-dining-area-02.jpg',
-      alt: 'discoverServices.services.gastronomy.alt',
-      title: 'discoverServices.services.gastronomy.title',
+      src: servicesContent.gastronomy.src,
+      alt: servicesContent.gastronomy.alt,
+      title: servicesContent.gastronomy.title,
       path: '/services-facilities/services',
       fragment: 'gastronomy'
     },
     {
-      src: '/assets/images/vehicles/vehicle-01.jpg',
-      alt: 'discoverServices.services.mobility.alt',
-      title: 'discoverServices.services.mobility.title',
+      src: servicesContent.mobility.src,
+      alt: servicesContent.mobility.alt,
+      title: servicesContent.mobility.title,
       path: '/services-facilities/services',
       fragment: 'mobility'
     },
     {
-      src: '/assets/images/amenities/slide-trip-planner.jpg',
-      alt: 'discoverServices.services.tripPlanner.alt',
-      title: 'discoverServices.services.tripPlanner.title',
+      src: servicesContent.tripPlanner.src,
+      alt: servicesContent.tripPlanner.alt,
+      title: servicesContent.tripPlanner.title,
       path: '/services-facilities/services',
       fragment: 'tripPlanner'
     },
     {
-      src: '/assets/images/amenities/slide-massage.jpg',
-      alt: 'discoverServices.services.massages.alt',
-      title: 'discoverServices.services.massages.title',
+      src: servicesContent.massages.src,
+      alt: servicesContent.massages.alt,
+      title: servicesContent.massages.title,
       path: '/services-facilities/services',
       fragment: 'massages'
     },
     {
-      src: '/assets/images/amenities/slide-laundry.jpg',
-      alt: 'discoverServices.services.laundry.alt',
-      title: 'discoverServices.services.laundry.title',
+      src: servicesContent.laundry.src,
+      alt: servicesContent.laundry.alt,
+      title: servicesContent.laundry.title,
       path: '/services-facilities/services',
       fragment: 'laundry'
     }
   ];
 }
+
+

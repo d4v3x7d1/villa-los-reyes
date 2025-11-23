@@ -1,76 +1,25 @@
-<carousel-section [slides]="[
-    {
-      src: 'assets/images/carousel/slide-facade.jpg',
-      altKey: 'carousel.slide1.alt',
-      titleKey: 'carousel.slide1.title',
-      subtitleKey: 'carousel.slide1.subtitle'
-    },
-    {
-      src: 'assets/images/carousel/slide-terrace.jpg',
-      altKey: 'carousel.slide2.alt',
-      titleKey: 'carousel.slide2.title',
-      subtitleKey: 'carousel.slide2.subtitle'
-    },
-    {
-      src: 'assets/images/carousel/slide-solar.jpg',
-      altKey: 'carousel.slide3.alt',
-      titleKey: 'carousel.slide3.title',
-      subtitleKey: 'carousel.slide3.subtitle'
-    },
-    {
-      src: 'assets/images/carousel/slide-room.jpg',
-      altKey: 'carousel.slide4.alt',
-      titleKey: 'carousel.slide4.title',
-      subtitleKey: 'carousel.slide4.subtitle'
-    }
-  ]" />
+<carousel-section [slides]="carouselSlides" />
+
 <gallery-info-section
-  [mainImage]="{ src: 'assets/images/gallery/slide-terrace.jpg', alt: 'images.aboutSection.mainAlt' }" [thumbImages]="[
-    { src: 'assets/images/gallery/slide-room.jpg', alt: 'images.aboutSection.thumb1Alt' },
-    { src: 'assets/images/gallery/slide-restaurant.jpg', alt: 'images.aboutSection.thumb2Alt' },
-    { src: 'assets/images/gallery/slide-solar-panels.jpg', alt: 'images.aboutSection.thumb3Alt' }
-  ]" [title]="'about.info.title'" [description]="'about.info.description'"
-  [link]="{ text: 'about.info.button', url: '/about' }" [panelWidth]="'600px'" [hasHostBg]="false" />
+  [mainImage]="galleryInfo.mainImage"
+  [thumbImages]="galleryInfo.thumbImages"
+  [title]="galleryInfo.title"
+  [description]="galleryInfo.description"
+  [link]="galleryInfo.link"
+  [panelWidth]="galleryInfo.panelWidth"
+  [hasHostBg]="galleryInfo.hasHostBg"
+/>
 
+<discover-experiences-section
+  [header]="experienceHeader"
+  [experienceImages]="experienceImages"
+/>
 
-<discover-experiences-section [header]="{
-    title: 'experiences.header.title',
-    description: 'experiences.header.description',
-    link: { text: 'experiences.header.linkText', url: '/experiences' }
-  }" [experienceImages]="[
-  {
-    src: '/assets/images/adventures/slide-horse-riding-01.jpg',
-    alt: 'experiences.items.cabalgatas.alt',
-    title: 'experiences.items.cabalgatas.title',
-    link: '/experiences/horseback-riding'
-  },
-  {
-    src: '/assets/images/adventures/slide-hiking.jpg',
-    alt: 'experiences.items.senderismo.alt',
-    title: 'experiences.items.senderismo.title',
-    link: '/experiences/hiking'
-  },
-  {
-    src: '/assets/images/adventures/slide-cycling.jpg',
-    alt: 'experiences.items.ciclotours.alt',
-    title: 'experiences.items.ciclotours.title',
-    link: '/experiences/cycle-tours'
-  },
-  {
-    src: '/assets/images/adventures/slide-beach-01.jpg',
-    alt: 'experiences.items.otras.alt',
-    title: 'experiences.items.otras.title',
-    link: '/experiences/other'
-  }
-]
-" />
+<discover-room-section
+  [info]="roomsInfo"
+  [rooms]="rooms.slice(0, 5)"
+/>
 
-<discover-room-section [info]="{
-      title: 'rooms.info.title',
-      description: 'rooms.info.description',
-      link: { text: 'rooms.info.button', url: '/services-facilities/facilities' }
-    }" [rooms]="rooms.slice(0, 5)" />
-
-<discover-package-default-one/>
+<discover-package-default-one />
 
 <discover-services-default />

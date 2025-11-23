@@ -1,15 +1,37 @@
-.services-gallery {
-  display: flex;
-  /* justify-content: center; */
-  width: 100%;
-  overflow: auto;
+:host {
+  display: block;
 }
 
-.services-gallery::-webkit-scrollbar{
+.services-gallery {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  border-radius: 0.75rem;
+
+  scroll-behavior: auto
+}
+
+.services-gallery::-webkit-scrollbar {
   display: none;
 }
 
 .service-link {
   display: block;
   text-decoration: none;
+}
+
+
+
+@media(max-width:600px) {
+  .services-gallery {
+    padding: 0;
+    border-radius: 0.5rem;
+    padding-left: calc((100% - 400px) / 2);
+    padding-right: calc((100% - 400px) / 2);
+
+  }
+
+
 }

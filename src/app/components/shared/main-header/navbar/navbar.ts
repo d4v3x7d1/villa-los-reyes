@@ -5,12 +5,12 @@ import { LangSelector } from './lang-selector/lang-selector';
 // import { LanguageSelector } from "../language-selector/language-selector";
 
 @Component({
-  selector: 'navbar-section',
-  templateUrl: './navbar-section.html',
-  styleUrls: ['./navbar-section.css'],
+  selector: 'navbar',
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.css'],
   imports: [LangSelector, TranslatePipe, RouterLink, RouterLinkActive]
 })
-export class NavbarSection {
+export class Navbar {
 
   menuOpen = false;
   lastScroll = 0;

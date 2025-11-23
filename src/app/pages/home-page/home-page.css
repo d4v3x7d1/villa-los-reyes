@@ -5,7 +5,7 @@
 }
 
 gallery-info-section {
-  margin-top: -7.5rem;
+  margin-top: -7.5rem; /* mismo efecto sin romper el layout */
 }
 
 .fade-wrapper {

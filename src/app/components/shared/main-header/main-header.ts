@@ -1,11 +1,11 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { NavbarSection } from './navbar-section/navbar-section';
 import { PromoBanner } from './promo-banner/promo-banner';
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'main-header',
   standalone: true,
-  imports: [NavbarSection, PromoBanner],
+  imports: [Navbar, PromoBanner],
   templateUrl: './main-header.html',
   styleUrl: './main-header.css',
 })

@@ -17,15 +17,15 @@
   justify-content: flex-start;
   align-items: stretch;
   width: 100%;
-  max-width: 1600px;
-  gap: 3.75rem;
+  /* max-width: 1600px; */
+  gap: 2.5rem;
   position: relative;
 }
 
 .info-container {
   display: flex;
   flex: 0 0 400px;
-  margin-left: max(5rem, calc((100vw - 1600px) / 2));
+  margin-left: max(5rem, calc((100vw - 1600px) / 2 - 5rem));
   align-items: stretch;
 }
 
@@ -40,8 +40,8 @@
 @media(max-width: 600px) {
 
   .rooms-section {
-    padding: 1rem;
-    border-radius: 2rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem 1rem 0 0;
   }
 
   .rooms-container {
@@ -52,8 +52,10 @@
 
   .info-container {
     margin-left: 0;
-    flex: 0 0 auto; /* o simplemente flex: none; */
-    align-self: center; /* opcional: centra el bloque en el eje cruzado */
+    flex: 0 0 auto;
+    /* o simplemente flex: none; */
+    align-self: center;
+    /* opcional: centra el bloque en el eje cruzado */
     width: 100%;
     max-width: 400px;
   }

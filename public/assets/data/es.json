@@ -120,7 +120,6 @@
       "room5Details": "2 camas / Baño privado / 4 personas"
     }
   },
-  
   "packages": {
     "title": "Paquetes en ofertas",
     "description": "Vive la magia de Viñales con nuestros paquetes exclusivos: <strong>alojamiento acogedor</strong>,\n<strong>paisajes inolvidables</strong> y <strong>experiencias auténticas</strong>. ¡Reserva hoy!",
@@ -171,27 +170,24 @@
     "services": {
       "gastronomy": {
         "title": "Gastronomía",
-        "src": "assets/images/services/gastronomia.jpg",
-        "alt": "Servido en restaurante local, comida típica cubana"
+        "alt": "Gastronomía cubana"
       },
       "mobility": {
         "title": "Movilidad",
-        "src": "assets/images/services/movilidad.jpg",
         "alt": "Vehículo turístico para traslados en Viñales y zonas de Cuba"
       },
-      "tripPlanner": {
-        "title": "Trip Planner",
-        "src": "assets/images/services/trip planner.jpg",
-        "alt": "Guía mostrando mapa y plan de viaje a visitantes"
-      },
+      "tripPlanner":
+        {
+          "title": "Trip Planner",
+          "alt": "Planificación de viajes"
+        }
+      ,
       "massages": {
         "title": "Masajes",
-        "src": "assets/images/services/masajes.jpg",
         "alt": "Masajista aplicando tratamiento relajante"
       },
       "laundry": {
         "title": "Lavandería",
-        "src": "assets/images/services/lavandería.jpg",
         "alt": "Ropa doblada y planchada en servicio de lavandería"
       }
     }

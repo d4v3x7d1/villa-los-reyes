@@ -21,7 +21,7 @@
                   @for (s of stars; track s) {
                   <span class="material-symbols-outlined" [style.color]="review.rating >= s ? '#404944' : '#404944'"
                     [style.font-variation-settings]=" review.rating >= s ? `'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24`: `'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24`">
-                    star
+                  star
                   </span>
 
                   }
@@ -84,11 +84,17 @@
 
         <div class="review-stars interactive">
           @for (s of stars; track s) {
+
+
           <span class="material-symbols-outlined" (click)="rating = s" [style.color]="rating >= s ? '#A3D0BD' : '#ccc'"
-            [style.font-variation-settings]=" rating >= s ? `'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24`: `'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24`">
+            [style.font-variation-settings]="rating >= s
+        ? `'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24`
+        : `'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24`">
             star
           </span>
+
           }
+
         </div>
 
         <p class="form-subtitle">¡Comparte tu experiencia con nosotros!</p>

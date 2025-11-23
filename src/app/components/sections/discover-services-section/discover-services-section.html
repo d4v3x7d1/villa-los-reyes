@@ -1,4 +1,9 @@
 <section class="services-section">
-  <section-header [header]="header()" />
-  <services-gallery [services]="services()" />
+  <div class="services-wrapper">
+    <section-header [header]="header()" />
+    <div class="gallery-wrapper">
+      <services-gallery [services]="services()" />
+    </div>
+  </div>
+
 </section>

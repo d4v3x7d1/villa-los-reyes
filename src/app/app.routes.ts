@@ -19,7 +19,6 @@ import { galleryAmazingSunrise, galleryAntiquityAndNature, galleryEcologicalAgri
 import { DiscoverPackageDefaultAll } from './presets/discover-package-default-all/discover-package-default-all';
 import { PackagesPage } from './pages/packages-page/packages-page';
 import { PackageBasePage } from './components/base-pages/package-base-page/package-base-page';
-import { ReviewsPage } from './pages/reviews-page/reviews-page';
 import { ReviewsNewPage } from './pages/reviews-new-page/reviews-new-page';
 
 export const routes: Routes = [

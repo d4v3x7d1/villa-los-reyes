@@ -27,27 +27,23 @@
       description: 'servicesFacilities.sections.1.description' ,
       link: { text: 'servicesFacilities.sections.1.link' , url: '/paquetes' }
     }" [rightImages]="[
-    {
-      src: '/assets/images/restaurant/slide-dining-area-02.jpg',
-      alt: 'Gastronomía cubana',
-      name: 'Gastronomía',
-      details: 'Restaurante con sabores cubanos e internacionales.',
-      path: '/services-facilities/services#gastronomy'
-    },
-    {
-      src: '/assets/images/vehicles/vehicle-01.jpg',
-      alt: 'Transporte y movilidad',
-      name: 'Movilidad',
-      details: 'Traslados y excursiones con chofer privado.',
-      path: '/services-facilities/services#mobility'
-    },
-    {
-      src: '/assets/images/amenities/slide-trip-planner.jpg',
-      alt: 'Gestor de viajes',
-      name: 'Planificación de viajes',
-      details: 'Te ayudamos a diseñar tu experiencia en Viñales.',
-      path: '/services-facilities/services#tripPlanner'
-    }
-  ]" color="#f7faf7"
-  />
+      {
+        src: servicesContent.gastronomy.src,
+        alt: servicesContent.gastronomy.alt,
+        name: servicesContent.gastronomy.title,
+        path: '/services-facilities/services#gastronomy'
+      },
+      {
+        src: servicesContent.mobility.src,
+        alt: servicesContent.mobility.alt,
+        name: servicesContent.mobility.title,
+        path: '/services-facilities/services#mobility'
+      },
+      {
+        src: servicesContent.tripPlanner.src,
+        alt: servicesContent.tripPlanner.alt,
+        name: servicesContent.tripPlanner.title,
+        path: '/services-facilities/services#tripPlanner'
+      }
+    ]" color="#f7faf7" />
 </div>

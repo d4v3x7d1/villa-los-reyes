@@ -9,7 +9,7 @@
 /* panel de texto */
 .location-section info-panel {
   flex: 1;
-  max-width: 480px;
+  max-width: 400px;
   background-color:  red;
   /* background: #E4EAE5; */
 

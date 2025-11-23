@@ -1,13 +1,13 @@
 :host {
   display: block;
-  width: 100%;
-  max-width: 29.5rem;
+  font-family: Poppins, sans-serif;
 }
 
 .experience-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 25rem;
   gap: 1rem;
   text-align: center;
 }
@@ -15,12 +15,10 @@
 .image-wrapper {
   width: 100%;
   aspect-ratio: 1 / 1;
-  /* 🔹 Mantiene proporción 1:1 */
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
-  /* evita que se deforme */
 }
 
 .image-wrapper img {
@@ -35,15 +33,23 @@
 }
 
 .experience-item h2 {
-
   color: #186B53;
   text-align: center;
-  font-family: Poppins, sans-serif;
   font-size: 1.75rem;
   font-weight: 600;
   line-height: 2.375rem;
   line-height: 1.3;
-  margin: 0;
 }
 
+@media (max-width: 600px) {
 
+
+  .experience-item h2 {
+    font-size: 1.5rem;
+  }
+
+  .experience-item {
+    gap: 0.5rem;
+  }
+
+}

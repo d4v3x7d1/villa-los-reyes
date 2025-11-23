@@ -7,25 +7,43 @@
 
 .services-section {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
   width: 100%;
   background-color: #E4EAE5;
-
-  padding: 5rem 0 8.75rem 0;
+  padding: 5rem 0;
   position: relative;
   border-radius: 3rem 3rem 0 0;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.services-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1760px;
+  margin: 0 auto;
+}
+
+
+services-gallery {
+  display: block;
+  border-radius: 0.25rem;
 }
 
 @media(max-width:600px) {
   .services-section {
-
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    border-radius: 1rem 1rem 0 0;
   }
 
   section-header {
-    padding: 1rem;
+    max-width: 400px;
+  }
 
+
+  .services-wrapper {
+    width: 100%;
+    align-items: center;
+    gap: 1rem
   }
 }

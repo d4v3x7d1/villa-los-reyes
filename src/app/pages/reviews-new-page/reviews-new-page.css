@@ -93,6 +93,14 @@
   transition: color 0.2s, font-variation-settings 0.2s;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL'1,
+    'wght'400,
+    'GRAD'0,
+    'opsz'24
+}
+
 
 .review-date {
   padding: 0.75rem 0;

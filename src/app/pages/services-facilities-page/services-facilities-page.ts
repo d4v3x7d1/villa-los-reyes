@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MainHeaderSection } from "../../components/sections/main-header-section/main-header-section";
 import { SplitGallerySection } from "../../components/sections/split-gallery-section/split-gallery-section";
 import { rooms as roomData} from '../../config/room-data';
+import { servicesContent } from '../../config/services-data';
 
 @Component({
   selector: 'app-services',
@@ -11,5 +12,6 @@ import { rooms as roomData} from '../../config/room-data';
 })
 export class ServicesFacilitiesPage {
 
-  rooms = roomData
+  rooms = roomData;
+  servicesContent = servicesContent;
 }

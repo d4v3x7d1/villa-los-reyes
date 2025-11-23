@@ -1,16 +1,14 @@
 .rooms-gallery {
   display: flex;
   gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
 
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 
   scroll-snap-type: x mandatory;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-   /* scroll-padding-left: 1rem; */
 }
 
 .rooms-gallery::-webkit-scrollbar {
@@ -18,10 +16,22 @@
 }
 
 .room-link {
-  text-decoration: none;
   display: block;
-
-  flex: 0 0 auto;
+  text-decoration: none;
+  flex: 1 1 auto;
   scroll-snap-align: start;
+}
+
+@media (max-width: 600px) {
+
+  .rooms-gallery {
+    padding: 0;
+    padding-left: calc((100% - 400px) / 2);
+    gap: 1rem;
+  }
+
+  .room-link {
+    scroll-snap-align: center; /* hace snap al centro de la pantalla */
+  }
 }
 

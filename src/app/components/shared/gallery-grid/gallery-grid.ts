@@ -26,7 +26,7 @@ export class GalleryGrid implements OnInit {
    * Ejemplo: [{ maxWidth: 600, mainHeight: '20vh', thumbHeight: '8vh' }]
    */
   responsiveConfig = input<ResponsiveConfig[]>([
-    { maxWidth: 600, mainHeight: '24vh', thumbHeight: '10.5vh' },
+    { maxWidth: 600, mainHeight: '10rem', thumbHeight: '5rem' },
   ]);
 
   /**
