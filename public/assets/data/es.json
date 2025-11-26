@@ -161,6 +161,26 @@
       "price": "$00.00 por persona"
     }
   },
+
+  "servicesFacilities": {
+    "header": {
+      "title": "Servicios e instalaciones",
+      "description": "Descubre los servicios que harán de tu estancia una experiencia inolvidable"
+    },
+    "sections": [
+      {
+        "title": "Conoce nuestras instalaciones",
+        "description": "Ofrecemos una experiencia única con nuestras <strong>habitaciones independientes</strong>, proporcionando privacidad y comodidad. Disfruta de vistas panorámicas desde nuestras <strong>terrazas</strong>, perfectas para relajarse. Pasea por nuestros exuberantes <strong>jardines</strong> y sumérgete en la tranquilidad de la naturaleza. Además, contamos con una refrescante <strong>piscina</strong> para tu disfrute. Ven y vive una estancia inolvidable.",
+        "link": "Ver más sobre nuestras instalaciones"
+      },
+      {
+        "title": "Conoce nuestros servicios",
+        "description": "Disfruta de una deliciosa <strong>gastronomía cubana</strong> preparada por chefs locales, <strong>transporte</strong> para explorar la región, y la asistencia de nuestro <strong>gestor de viajes</strong> para que aproveches al máximo tu estancia. Además, contamos con servicio de <strong>lavandería, masajes</strong> relajantes para recargar energías y <strong>clases de baile</strong> para sumergirte en la cultura cubana.",
+        "link": "Ver más sobre nuestros servicios"
+      }
+    ]
+  },
+
   "discoverServices": {
     "header": {
       "title": "Servicios e Instalaciones",
@@ -192,24 +212,7 @@
       }
     }
   },
-  "servicesFacilities": {
-    "header": {
-      "title": "Servicios e instalaciones",
-      "description": "Descubre los servicios que harán de tu estancia una experiencia inolvidable"
-    },
-    "sections": [
-      {
-        "title": "Conoce nuestras instalaciones",
-        "description": "Ofrecemos una experiencia única con nuestras <strong>habitaciones independientes</strong>, proporcionando privacidad y comodidad. Disfruta de vistas panorámicas desde nuestras <strong>terrazas</strong>, perfectas para relajarse. Pasea por nuestros exuberantes <strong>jardines</strong> y sumérgete en la tranquilidad de la naturaleza. Además, contamos con una refrescante <strong>piscina</strong> para tu disfrute. Ven y vive una estancia inolvidable.",
-        "link": "Ver más sobre nuestras instalaciones"
-      },
-      {
-        "title": "Conoce nuestros servicios",
-        "description": "Disfruta de una deliciosa <strong>gastronomía cubana</strong> preparada por chefs locales, <strong>transporte</strong> para explorar la región, y la asistencia de nuestro <strong>gestor de viajes</strong> para que aproveches al máximo tu estancia. Además, contamos con servicio de <strong>lavandería, masajes</strong> relajantes para recargar energías y <strong>clases de baile</strong> para sumergirte en la cultura cubana.",
-        "link": "Ver más sobre nuestros servicios"
-      }
-    ]
-  },
+
   "services": {
     "header": {
       "title": "Nuestros servicios",
@@ -230,6 +233,11 @@
             "Wifi"
           ]
         }
+
+
+
+
+
       }
     ]
   },

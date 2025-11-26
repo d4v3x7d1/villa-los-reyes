@@ -211,5 +211,98 @@
         }
       }
     ]
-  }
+  },
+  "experiencesContent": {
+  "header": {
+    "title": "Experiences & Adventures",
+    "description": "Discover unforgettable adventures and unique experiences in Viñales."
+  },
+  "gallerySections": [
+    {
+      "leftImageAlt": "Facilities and panoramic views of Villa Los Reyes",
+      "leftImageName": "Horse Riding 01",
+      "infoTitle": "Horseback Riding in Viñales: nature, culture, and tradition in every step",
+      "infoDescription": "Exploring <strong>Viñales on horseback</strong> is an immersive experience that reveals the essence of the <strong>Cuban landscape</strong>. Among towering <strong>mogotes</strong> and lush <strong>tobacco fields</strong>, the journey leads to <strong>traditional farms</strong> where <strong>tobacco and coffee</strong> are cultivated by hand. Accessible to all experience levels, this activity promotes <strong>sustainable tourism</strong>, strengthening the connection with <strong>local communities</strong> and protecting the natural environment.",
+      "linkText": "DISCOVER ALL HORSEBACK RIDES",
+      "rightImages": [
+        {
+          "alt": "Riding to the mountain",
+          "name": "Riding to the mountain"
+        },
+        {
+          "alt": "A fascinating landscape",
+          "name": "A fascinating landscape"
+        },
+        {
+          "alt": "The setting sun",
+          "name": "The setting sun"
+        }
+      ]
+    },
+    {
+      "leftImageAlt": "Facilities and panoramic views of Villa Los Reyes",
+      "leftImageName": "Hiking 01",
+      "infoTitle": "Hiking in Viñales: between mountains, valleys, and living traditions",
+      "infoDescription": "Walking through the <strong>trails of Viñales</strong> means discovering a vibrant environment where <strong>biodiversity</strong>, fresh air, and <strong>mountain landscapes</strong> set the pace of the <strong>journey</strong>. The routes pass through <strong>fertile valleys and natural viewpoints</strong>, while interactions with local <strong>farmers</strong> reveal <strong>agricultural traditions</strong> passed down through generations. An enriching experience that blends adventure, culture, and respect for nature.",
+      "linkText": "DISCOVER ALL HIKING TOURS",
+      "rightImages": [
+        {
+          "alt": "From hell to paradise",
+          "name": "From hell to paradise"
+        },
+        {
+          "alt": "Amazing sunrise",
+          "name": "Amazing sunrise"
+        },
+        {
+          "alt": "Tobacco inside",
+          "name": "Tobacco inside"
+        }
+      ]
+    },
+    {
+      "leftImageAlt": "Facilities and panoramic views of Villa Los Reyes",
+      "leftImageName": "Cycling 01",
+      "infoTitle": "Viñales on wheels: a journey through nature and tradition",
+      "infoDescription": "Exploring <strong>Viñales by bike</strong> is a dynamic and authentic way to connect with its <strong>iconic landscapes</strong>. The paths wind between <strong>mogotes</strong>, <strong>tobacco farms</strong>, and lively <strong>rural scenery</strong>, offering complete immersion in the environment. Encounters with <strong>local farmers</strong> and their traditional knowledge add cultural value to this active experience, where movement becomes a way of discovering.",
+      "linkText": "DISCOVER ALL CYCLE TOURS",
+      "rightImages": [
+        {
+          "alt": "El Calvario",
+          "name": "El Calvario"
+        },
+        {
+          "alt": "El Resbaloso",
+          "name": "El Resbaloso"
+        },
+        {
+          "alt": "Exploring the valleys",
+          "name": "Exploring the valleys"
+        }
+      ]
+    },
+    {
+      "leftImageAlt": "Facilities and panoramic views of Villa Los Reyes",
+      "leftImageName": "Beach 01",
+      "infoTitle": "Beyond the valley: unique experiences in Viñales",
+      "infoDescription": "<strong>Viñales</strong> surprises with a <strong>diverse</strong> range of experiences that go far beyond its <strong>mountain landscapes</strong>. Just a few kilometers away, <strong>Cayo Jutías</strong> invites you to relax among turquoise waters and white sands, perfect for <strong>swimming</strong>, <strong>snorkeling</strong>, or simply unwinding. On land, <strong>agro-ecological farms</strong> welcome visitors with <strong>sustainable practices and authentic flavors</strong>. A destination that blends <strong>nature</strong>, <strong>local culture</strong>, and moments of true serenity.",
+      "linkText": "DISCOVER MORE EXPERIENCES",
+      "rightImages": [
+        {
+          "alt": "A paradisiacal beach",
+          "name": "A paradisiacal beach"
+        },
+        {
+          "alt": "An intense day",
+          "name": "An intense day"
+        },
+        {
+          "alt": "Viñales: day trip",
+          "name": "Viñales: day trip"
+        }
+      ]
+    }
+  ]
+}
+
 }
