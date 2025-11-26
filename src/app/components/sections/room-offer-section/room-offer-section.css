@@ -26,17 +26,24 @@
 }
 
 .offer-content {
+  display: flex;
+  justify-content: center;
   height: 100%;
   width: 100%;
   background-color: rgba(239, 245, 240, 0.80);
   backdrop-filter: blur(6px);
-  padding: 1.8rem 2rem;
+  padding: 5rem;
+}
+
+.text-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
 }
+
+
 
 .title {
   color: #D17D00;
@@ -145,4 +152,38 @@
   border-color: transparent;
   box-shadow: 0 0 0 4px rgba(209, 125, 0, 0.12);
   /* suave halo para foco */
+}
+
+@media (max-width: 600px) {
+  .room-offer-section {
+    height: 42rem;
+    /* opcional, ajusta si quieres más alto */
+  }
+
+  .offer-overlay {
+    width: 100%;
+    /* ocupa todo */
+    inset: 0;
+    /* toda la pantalla */
+  }
+
+  .offer-content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239, 245, 240, 0.521);
+    padding: 2rem 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .text-box {
+    max-width: 400px;
+    width: 100%;
+
+  }
+
+
 }

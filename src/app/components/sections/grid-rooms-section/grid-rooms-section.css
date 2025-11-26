@@ -1,7 +1,6 @@
-:host {
-  display: block;
-}
+:host { display: block; box-sizing: border-box; }
 
+/* grid ya existente (desktop) */
 .rooms-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11,10 +10,27 @@
   background-color: #f7faf7;
   padding: 5rem;
   border-radius: 3rem 3rem 0 0;
-
+  box-sizing: border-box;
+  min-width: 0; /* importante: evita que la grid imponga sizing intrínseco */
 }
 
+/* Asegura que los directos hijos no impongan un min-width extraño */
+/* .rooms-grid > * {
+  min-width: 0;
+  min-height: 0;
+} */
 
-@media(max-width:600px){
+/* Móvil: forzamos 1 columna y confirmamos que la celda puede crecer */
+@media (max-width: 600px) {
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem 1rem 0 0;
+  }
 
+  .rooms-grid > * {
+    width: 100%;
+  }
 }

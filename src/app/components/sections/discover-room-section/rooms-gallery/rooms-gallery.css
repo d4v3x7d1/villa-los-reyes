@@ -18,9 +18,15 @@
 .room-link {
   display: block;
   text-decoration: none;
-  flex: 1 1 auto;
   scroll-snap-align: start;
+  flex: 0 0 400px;
+  /* no crece ni se encoge más allá de max-width */
 }
+
+
+
+
+
 
 @media (max-width: 600px) {
 
@@ -31,7 +37,7 @@
   }
 
   .room-link {
-    scroll-snap-align: center; /* hace snap al centro de la pantalla */
+    scroll-snap-align: center;
+    flex: 0 0 256px;
   }
 }
-

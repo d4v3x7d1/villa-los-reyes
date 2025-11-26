@@ -1,5 +1,13 @@
-<div class="room-item">
-  <img [src]="src()" [alt]="alt()|translate" />
-  <p class="room-name">{{ name()|translate }}</p>
-  <p class="room-details">{{ details()|translate }}</p>
-</div>
+@if (link()) {
+  <a class="room-item" [routerLink]="link()" [attr.variant]="variant()">
+    <img [src]="src()" [alt]="alt() | translate" />
+    <p class="room-name">{{ name() | translate }}</p>
+    <p class="room-details">{{ details() | translate }}</p>
+  </a>
+} @else {
+  <div class="room-item" [attr.variant]="variant()">
+    <img [src]="src()" [alt]="alt() | translate" />
+    <p class="room-name">{{ name() | translate }}</p>
+    <p class="room-details">{{ details() | translate }}</p>
+  </div>
+}
