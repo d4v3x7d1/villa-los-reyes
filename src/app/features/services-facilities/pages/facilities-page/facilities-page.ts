@@ -9,6 +9,7 @@ import {
 import { RoomData } from '../../interfaces/services-facilities.interface';
 import { GallerySplitView } from '../../../../shared/components/gallery-split-view/gallery-split-view';
 import { RoomsDetailsGrid } from '../../components/rooms-details-grid/rooms-details-grid';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'facilities-page',
@@ -18,6 +19,13 @@ import { RoomsDetailsGrid } from '../../components/rooms-details-grid/rooms-deta
 })
 export class FacilitiesPage {
   private facilitiesService = inject(FacilitiesService);
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.setFromKeys('HEADER.FACILITIES.TITLE', 'HEADER.FACILITIES.DESCRIPTION', {
+      image: 'assets/imgs/outdoor/gardens/lush-garden-red-flowers-pool.webp',
+    });
+  }
 
   public readonly header: HeaderData = {
     title: 'HEADER.FACILITIES.TITLE',

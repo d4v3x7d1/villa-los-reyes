@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { PageHeader } from "../../../../shared/components/page-header/page-header";
 import { GallerySplitView } from "../../../../shared/components/gallery-split-view/gallery-split-view";
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { ExperiencesCrossSell } from "../../../experiences/components/experience
 import { SectionNav } from "../../../../shared/components/section-nav/section-nav";
 import { SectionNavService } from '../../../../shared/services/section-nav.service';
 import { HeaderData } from '../../../../shared/interfaces/common.interface';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'room-page',
@@ -23,6 +24,20 @@ export class RoomPage {
   private router = inject(Router);
   private facilitiesService = inject(FacilitiesService);
   private navService = inject(SectionNavService);
+  private seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const room = this.room();
+      if (room) {
+        this.seo.set({
+          title: room.title,
+          description: room.desc,
+          image: room.images?.[0]?.src,
+        });
+      }
+    });
+  }
 
   // --- Signals Base ---
   public nav = this.navService.currentState;

@@ -7,6 +7,7 @@ import { FeatureItem, mapToFeatureTemplateItem } from '../../../shared/interface
 import { PackageCrossList } from "../../packages/components/package-cross-list/package-cross-list";
 import { ServiceCrossList } from "../../services-facilities/components/service-cross-list/service-cross-list";
 import { HeaderData } from '../../../shared/interfaces/common.interface';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
     selector: 'experiences-main',
@@ -23,6 +24,13 @@ import { HeaderData } from '../../../shared/interfaces/common.interface';
 })
 export class ExperiencesMainPage {
     private experiencesService = inject(ExperiencesService);
+    private seo = inject(SeoService);
+
+    constructor() {
+        this.seo.setFromKeys('HEADER.EXPERIENCES.TITLE', 'HEADER.EXPERIENCES.DESCRIPTION', {
+            image: '/assets/imgs/headers/experiences/experiences-header.webp',
+        });
+    }
 
     readonly header:HeaderData = {
         title: 'HEADER.EXPERIENCES.TITLE',

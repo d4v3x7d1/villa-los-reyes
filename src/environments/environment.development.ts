@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
+  siteUrl: 'https://www.villa-los-reyes.com',
   firebase: {
     apiKey: 'AIzaSyDlMsDMuhRne9-X7DXvWvkmJHIuq4FBavc',
     authDomain: 'villa-los-reyes.firebaseapp.com',

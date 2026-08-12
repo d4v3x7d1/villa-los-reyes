@@ -7,6 +7,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { PackageService } from '../../services/package.service';
 import { map } from 'rxjs';
 import { mapToPackageCardData } from '../../interfaces/packages.interface';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'packages-page',
@@ -17,6 +18,13 @@ import { mapToPackageCardData } from '../../interfaces/packages.interface';
 export class PackagesPage {
   
    packageService = inject(PackageService)
+
+   constructor() {
+      this.seo.setFromKeys('HEADER.PACKAGES.TITLE', 'HEADER.PACKAGES.DESCRIPTION', {
+         image: 'assets/imgs/adventures/horseback/classic-vinales/classic-vinales-valley-panorama.webp',
+      });
+   }
+   private seo = inject(SeoService)
    readonly header: HeaderData = {
       title: 'HEADER.PACKAGES.TITLE',
       description: 'HEADER.PACKAGES.DESCRIPTION',

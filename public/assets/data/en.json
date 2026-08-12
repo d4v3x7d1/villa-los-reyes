@@ -8,6 +8,10 @@
   },
 
   "HEADER": {
+    "HOME": {
+      "TITLE": "Guest house in Viñales",
+      "DESCRIPTION": "Villa Los Reyes: cozy accommodation in Viñales, Cuba. Gardens, pool, bar-restaurant and views of the mogotes. Experiences and packages for an unforgettable stay."
+    },
     "EXPERIENCES": {
       "TITLE": "Experiences and adventures",
       "DESCRIPTION": "Discover unforgettable adventures and unique experiences in Viñales.",
@@ -51,6 +55,10 @@
     "REVIEWS": {
       "TITLE": "Reviews and Comments",
       "DESCRIPTION": "Read our guests' reviews and discover why Villa Los Reyes is the perfect place for your stay. Your opinion matters too!"
+    },
+    "BOOKING": {
+      "TITLE": "Book your stay",
+      "DESCRIPTION": "Book your accommodation at Villa Los Reyes, Viñales. Choose dates, guests and share your details to confirm your stay in Cuba."
     }
   },
 

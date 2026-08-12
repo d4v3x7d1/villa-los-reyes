@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, Input } from '@angular/core';
+import { Component, computed, effect, inject, input, Input } from '@angular/core';
 import { PageHeader } from '../../../../shared/components/page-header/page-header';
 import { HeaderData } from '../../../../shared/interfaces/common.interface';
 import { PackageItinerary } from '../../components/package-itinerary/package-itinerary';
@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PackageService } from '../../services/package.service';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of, switchMap, tap } from 'rxjs';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'package-itinerary-page',
@@ -18,6 +19,23 @@ export class PackageItineraryPage {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private packageService = inject(PackageService);
+  private seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const pkg = this.packageData();
+      if (pkg) {
+        this.seo.set({
+          title: pkg.title,
+          description: pkg.desc,
+          image: pkg.image?.src,
+          type: 'product',
+        });
+      } else {
+        this.seo.setFromKeys('HEADER.ITINERARY.TITLE', 'HEADER.ITINERARY.DESCRIPTION');
+      }
+    });
+  }
 
   slug = input.required<string>();
 

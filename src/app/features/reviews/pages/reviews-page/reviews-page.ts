@@ -14,6 +14,7 @@ import { Review } from '../../interfaces/reviews.interfaces';
 import { PageHeader } from '../../../../shared/components/page-header/page-header';
 import { AuthReviewForm } from '../../components/auth-review-form/auth-review-form';
 import { getClassStar, getReviewUserPhoto, getStarColor, getUserDisplayName } from '../../../../utils/review-utils';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'reviews-page',
@@ -25,8 +26,13 @@ export class ReviewsPage {
   // --- Inyecciones ---
   private readonly auth = inject(AuthService);
   private readonly reviewsService = inject(ReviewsService);
+  private readonly seo = inject(SeoService);
   
   private readonly platformId = inject(PLATFORM_ID);
+  
+  constructor() {
+    this.seo.setFromKeys('HEADER.REVIEWS.TITLE', 'HEADER.REVIEWS.DESCRIPTION');
+  }
   
 
   readonly getPhoto = (review: Review) => getReviewUserPhoto(review, this.platformId);

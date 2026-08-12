@@ -9,6 +9,7 @@ import { PageHeader } from '../../../../../shared/components/page-header/page-he
 import { PackageCrossList } from '../../../../packages/components/package-cross-list/package-cross-list';
 import { ServiceCrossList } from '../../../../services-facilities/components/service-cross-list/service-cross-list';
 import { HeaderData } from '../../../../../shared/interfaces/common.interface';
+import { SeoService } from '../../../../../shared/services/seo.service';
 
 @Component({
   selector: 'adventures-overview-template',
@@ -21,6 +22,13 @@ export class AdventuresOverviewTemplate {
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private navService = inject(SectionNavService);
+  private seo = inject(SeoService);
+
+  constructor() {
+    this.seo.setFromKeys('HEADER.EXPERIENCES.TITLE', 'HEADER.EXPERIENCES.DESCRIPTION', {
+      image: this.header.img?.src,
+    });
+  }
 
   readonly header: HeaderData = {
     title: 'HEADER.EXPERIENCES.TITLE',

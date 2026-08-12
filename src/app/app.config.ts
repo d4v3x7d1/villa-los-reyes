@@ -1,14 +1,11 @@
 import {
   ApplicationConfig,
-  importProvidersFrom,
-  provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
 } from '@angular/core';
 import {
   provideRouter,
   withComponentInputBinding,
   withInMemoryScrolling,
-  withRouterConfig,
 } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -20,7 +17,6 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -46,12 +42,13 @@ export const appConfig: ApplicationConfig = {
     }),
     // --- CONFIGURACIÓN DE FIREBASE GLOBAL ---
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()), // <--- ESTO FALTABA
-    provideAuth(() => getAuth()),           // <--- ESTO TAMBIÉN
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
     // ----------------------------------------
-    {
-      provide: LocationStrategy,
-      useClass: HashLocationStrategy,
-    },
+    // CONFIGURACIÓN PARA PODER USAR NETLYFI(PROVISIONAL)
+    // {
+    //   provide: LocationStrategy,
+    //   useClass: HashLocationStrategy,
+    // },
   ],
 };

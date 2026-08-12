@@ -7,6 +7,7 @@ import { AboutService } from '../../services/about.service';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { AboutView } from '../../components/about-view/about-view';
 import { ReviewsCrossList } from "../../../reviews/components/reviews-cross-list/reviews-cross-list";
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'about-page',
@@ -16,6 +17,7 @@ import { ReviewsCrossList } from "../../../reviews/components/reviews-cross-list
 })
 export class AboutPage {
   aboutService = inject(AboutService);
+  private seo = inject(SeoService);
   readonly headerData: HeaderData = {
     title: 'HEADER.ABOUT.TITLE',
     description: 'HEADER.ABOUT.DESCRIPTION',
@@ -24,6 +26,12 @@ export class AboutPage {
       alt: 'HEADER.ABOUT.ALT',
     },
   };
+
+  constructor() {
+    this.seo.setFromKeys('HEADER.ABOUT.TITLE', 'HEADER.ABOUT.DESCRIPTION', {
+      image: 'assets/imgs/shared/villa-los-reyes-facade-garden.webp',
+    });
+  }
 
 
   aboutData = toSignal(

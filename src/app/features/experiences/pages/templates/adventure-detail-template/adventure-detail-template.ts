@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, effect, inject } from '@angular/core';
 import { DetailedGallery } from '../../../../../shared/components/detailed-gallery/detailed-gallery';
 import { SectionNav } from '../../../../../shared/components/section-nav/section-nav';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -15,6 +15,7 @@ import { SectionNavService } from '../../../../../shared/services/section-nav.se
 import { PageHeader } from '../../../../../shared/components/page-header/page-header';
 import { PackagesOffer } from '../../../../packages/components/package-offer/package-offer';
 import { RoomCrossSell } from '../../../../services-facilities/components/room-cross-sell/room-cross-sell';
+import { SeoService } from '../../../../../shared/services/seo.service';
 
 interface AdventureData {
   images: ImgData[];
@@ -39,6 +40,21 @@ export class AdventureDetailTemplate {
   private expService = inject(ExperiencesService);
   private pkgService = inject(PackageService);
   private navService = inject(SectionNavService);
+  private seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const data = this.mainData();
+      if (data) {
+        this.seo.set({
+          title: data.info.title,
+          description: data.info.desc,
+          image: data.images[0]?.src,
+          type: 'article',
+        });
+      }
+    });
+  }
 
   public nav = this.navService.currentState;
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ServiceCrossList } from "../../../services-facilities/components/service-cross-list/service-cross-list";
 import { PackageCrossList } from "../../../packages/components/package-cross-list/package-cross-list";
 import { ExperiencesCrossSell } from "../../../experiences/components/experiences-cross-sell/experiences-cross-sell";
@@ -6,6 +6,7 @@ import { CarouselSection } from '../../components/carousel-section/carousel-sect
 import { AboutView } from "../../../about/components/about-view/about-view";
 import { DiscoverRooms } from "../../../services-facilities/components/discover-room-section/discover-rooms";
 import { ReviewsCrossList } from "../../../reviews/components/reviews-cross-list/reviews-cross-list";
+import { SeoService } from "../../../../shared/services/seo.service";
 
 @Component({
   imports: [ServiceCrossList, PackageCrossList, ExperiencesCrossSell, CarouselSection, AboutView, DiscoverRooms, ReviewsCrossList],
@@ -13,6 +14,7 @@ import { ReviewsCrossList } from "../../../reviews/components/reviews-cross-list
   styleUrl: './home-page.css',
 })
 export class HomePage {
+    private seo = inject(SeoService);
 
     slides = [
     {
@@ -40,4 +42,11 @@ export class HomePage {
       subtitle: 'CAROUSEL.SLIDE_4.DESCRIPTION'
     }
   ];
+
+  constructor() {
+    this.seo.setFromKeys('HEADER.HOME.TITLE', 'HEADER.HOME.DESCRIPTION', {
+      image: this.slides[0].src,
+      type: 'website',
+    });
+  }
 }

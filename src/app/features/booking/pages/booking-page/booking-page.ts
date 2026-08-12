@@ -30,6 +30,7 @@ import { CustomValidators } from '../../../../utils/custom-validators';
 import { FormEffects } from '../../../../utils/form-effects';
 import parsePhoneNumber from 'libphonenumber-js';
 import { ReservationStateService } from '../../services/reservation-state-service';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'booking-page',
@@ -48,6 +49,7 @@ import { ReservationStateService } from '../../services/reservation-state-servic
 export class BookingPage {
   @ViewChild('topScrollAnchor') topScrollAnchor!: ElementRef;
   private platformId = inject(PLATFORM_ID);
+  private seo = inject(SeoService);
 
   private readonly stateService = inject(ReservationStateService);
   slug = input.required<string>();
@@ -58,6 +60,8 @@ export class BookingPage {
   public bookingError = signal(false);
 
   ngOnInit(): void {
+    this.seo.setFromKeys('HEADER.BOOKING.TITLE', 'HEADER.BOOKING.DESCRIPTION');
+
     // 1. Intentar recuperar el paso guardado al cargar el componente
     const savedStep = localStorage.getItem(this.storageKey());
     if (savedStep) {

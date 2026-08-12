@@ -9,6 +9,7 @@ import { FeatureOverviewTemplate, FeatureTemplateItem } from "../../../shared/te
 import { ServicesMainService } from '../services/services-main.service';
 import { FeatureItem, mapToFeatureTemplateItem } from '../../../shared/interfaces/feature-overview.interface';
 import { HeaderData } from '../../../shared/interfaces/common.interface';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
     selector: 'services-main',
@@ -23,6 +24,14 @@ import { HeaderData } from '../../../shared/interfaces/common.interface';
   `
 })
 export class ServicesFacilitiesMainPage {
+     private seo = inject(SeoService);
+
+     constructor() {
+        this.seo.setFromKeys('HEADER.SERVICES.TITLE', 'HEADER.SERVICES.DESCRIPTION', {
+            image: '/assets/imgs/services/gastronomy/villa-los-reyes-bar-sign-rustic.webp',
+        });
+     }
+
      readonly header:HeaderData = {
         title: 'HEADER.SERVICES.TITLE',
         description: 'HEADER.SERVICES.DESCRIPTION',

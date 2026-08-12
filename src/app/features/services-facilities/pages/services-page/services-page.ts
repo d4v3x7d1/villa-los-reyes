@@ -15,6 +15,7 @@ import {
 import { GallerySplitView } from '../../../../shared/components/gallery-split-view/gallery-split-view';
 import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { SeoService } from '../../../../shared/services/seo.service';
 
 @Component({
   selector: 'services-page',
@@ -26,7 +27,10 @@ export class ServicesPage {
   stayBenefitService = inject(StayBenefitsService);
   private viewport = inject(ViewportScroller);
   private route = inject(ActivatedRoute);
+  private seo = inject(SeoService);
   constructor() {
+    this.seo.setFromKeys('HEADER.STAY_BENEFITS.TITLE', 'HEADER.STAY_BENEFITS.DESCRIPTION');
+
     // Escuchamos cuando los datos estén listos
     effect(() => {
       const data = this.benefitsData();
